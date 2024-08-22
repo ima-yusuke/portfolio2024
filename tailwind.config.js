@@ -14,6 +14,11 @@ export default {
             fontFamily: {
                 sans: ['Figtree', ...defaultTheme.fontFamily.sans],
             },
+            colors: {
+                "bg-battle-green":"rgb(208,240,208)",
+                "bg-field-green":"rgb(153,225,152)",
+                "field-border":"rgb(222,225,154)"
+            }
         },
     },
 
