@@ -2,7 +2,7 @@
     {{--上部--}}
     <div class="flex items-end gap-20 pt-2 pl-2">
         <p class="text-3xl pl-4">{{$name}}<span class="pl-2">{{$sex}}</span></p>
-        <p class="text-2xl">Lv:12</p>
+        <p class="text-2xl">Lv:{{$level}}</p>
     </div>
 
     {{--下部--}}

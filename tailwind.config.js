@@ -17,7 +17,9 @@ export default {
             colors: {
                 "bg-battle-green":"rgb(208,240,208)",
                 "bg-field-green":"rgb(153,225,152)",
-                "field-border":"rgb(222,225,154)"
+                "field-border":"rgb(222,225,154)",
+                "bg-menu":"rgb(33,89,95)",
+                "menu-border":"rgb(72,72,104)"
             }
         },
     },
