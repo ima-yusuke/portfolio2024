@@ -7,6 +7,10 @@ Route::get('/', function () {
     return view('battle-page');
 });
 
+Route::get('/about', function () {
+    return view('about-1-page');
+});
+
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');

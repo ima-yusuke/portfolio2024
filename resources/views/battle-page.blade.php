@@ -13,16 +13,9 @@
             </article>
         </section>
 
-        {{--味方ポケモン--}}
-        <section>
-            {{--ポケモン詳細--}}
-
-
-
-        </section>
-
         {{--メニュー--}}
         <section class="absolute bottom-0 w-full">
+            {{--ポケモン詳細--}}
             <article class="flex justify-end mr-24 mb-4">
                 <x-pokemon-detail name="Yusuke Imai" sex="♂" hp="60" level="27" flag="true"></x-pokemon-detail>
             </article>
@@ -45,7 +38,7 @@
                             <p class="hoverable hover:cursor-pointer">バッグ</p>
                         </aside>
                         <aside class="flex justify-center gap-20 text-4xl">
-                            <p class="hoverable hover:cursor-pointer">ポケモン</p>
+                            <a href="/about" class="hoverable hover:cursor-pointer">ポケモン</a>
                             <p class="hoverable hover:cursor-pointer">にげる</p>
                         </aside>
                     </div>
