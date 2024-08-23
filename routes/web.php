@@ -8,7 +8,7 @@ Route::get('/', function () {
 });
 
 Route::get('/about', function () {
-    return view('about-1-page');
+    return view('about-page');
 });
 
 Route::get('/dashboard', function () {

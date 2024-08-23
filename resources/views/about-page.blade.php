@@ -1,7 +1,7 @@
 <x-template title="ポートフォリオ" css="app.css">
     <div class="min-h-screen flex flex-col">
-        {{--head--}}
-        <section class="flex items-center text-white text-5xl h-[100px]">
+        {{--head（じょうほう）--}}
+        <section class="flex items-center text-white text-5xl h-[100px]" id="head_info">
             <div class="bg-bg-about-dot h-full flex items-center">
                 <h1 class="bg-bg-about-title h-full flex items-center px-8 rounded-r-full pr-8 border-r-4 border-solid border-about-dot">
                     ポケモンじょうほう●
@@ -16,10 +16,38 @@
                         <div class="btn cross-key-btn top-mark"></div>
                         <div class="btn cross-key-btn left-mark"></div>
                         <div class="btn cross-key-btn center-mark">●</div>
-                        <button class="btn cross-key-btn right-mark">▲</button>
+                        <button class="btn cross-key-btn right-mark" id="right_btn">▲</button>
                         <div class="btn cross-key-btn bottom-mark"></div>
                     </div>
-                    <p><a>きりかえ</a></p>
+                    <p class="switch-text cursor-pointer">きりかえ</p>
+                </div>
+                <div class="flex items-center gap-2">
+                    <a href="/" class="a-btn">A</a>
+                    <p><a href="/">やめる</a></p>
+                </div>
+            </div>
+        </section>
+
+        {{--head（のうりょく）--}}
+        <section class="flex items-center text-white text-5xl h-[100px] hide" id="head_ability">
+            <div class="bg-bg-about-dot h-full flex items-center">
+                <h1 class="bg-bg-about-title h-full flex items-center px-16 rounded-r-full border-r-4 border-solid border-about-dot">
+                    ●
+                </h1>
+            </div>
+            <div class="bg-bg-about-command h-full">
+                <p class="text-about-dot bg-bg-about-dot h-full px-8 rounded-r-full flex items-center">ポケモンのうりょく●</p>
+            </div>
+            <div class="bg-bg-about-command py-4 flex-1 flex justify-center gap-14 max-h-[100px]">
+                <div class="flex items-center gap-2">
+                    <div class="cross-key-container relative">
+                        <div class="btn cross-key-btn top-mark"></div>
+                        <button class="btn cross-key-btn left-mark" id="left_btn">▲</button>
+                        <div class="btn cross-key-btn center-mark">●</div>
+                        <div class="btn cross-key-btn right-mark"></div>
+                        <div class="btn cross-key-btn bottom-mark"></div>
+                    </div>
+                    <p class="switch-text cursor-pointer">きりかえ</p>
                 </div>
                 <div class="flex items-center gap-2">
                     <a href="/" class="a-btn">A</a>
@@ -45,8 +73,8 @@
                     </div>
                 </div>
 
-                {{--right--}}
-                <div class="ml-4 h-full flex flex-col gap-6 my-4">
+                {{--right（じょうほう）--}}
+                <div class="ml-4 h-full flex flex-col gap-6 my-4" id="info_right_container">
                     <x-about-detail key="図鑑No." value="006"></x-about-detail>
                     <x-about-detail key="なまえ" value="今井 祐輔"></x-about-detail>
                     <x-about-detail key="生年月日" value="1996.11.25"></x-about-detail>
@@ -54,20 +82,23 @@
                 </div>
             </article>
 
-            {{--bottom--}}
-            <article class="flex justify-center">
+            {{--bottom（じょうほう）--}}
+            <article class="flex justify-center" id="info_bottom_container">
                 <div class="w-[90%] bg-white rounded-lg relative">
                     <div class="absolute -top-[5%] -left-[2%]">
                         <div class="bg-about-key relative rounded-full w-[450px] h-[40px] flex items-center justify-center z-20">
                             <p class="text-white text-4xl absolute">トレーナーメモ</p>
                         </div>
                     </div>
-                    <p class="text-2xl pt-10 px-6 relative leading-loose">
-                        プログラミングと英語学習が大好き。基本的に英語で話しかけても問題ない。放っておくとバックパッカーで一人どこかに旅に出ていく。エサはマックのフライドポテトを与えると喜ぶ。
-                        世界一周に憧れており、webサイト制作を通してその夢を叶えてくれるトレーナーを探している。まだまだ進化の可能性も秘めているポケモンである。
+                    <p class="text-2xl pt-10 px-6 leading-loose" id="trainer_memo">
+                        <span class="under-line">
+                            プログラミングと英語学習が大好き。基本的に英語で話しかけても問題ない。放っておくとバックパッカーで一人どこかに旅に出ていく。エサはマックのフライドポテトを与えると喜ぶ。
+                            世界一周に憧れており、webサイト制作を通してその夢を叶えてくれるトレーナーを探している。まだまだ進化の可能性も秘めているポケモンである。
+                        </span>
                     </p>
                 </div>
             </article>
         </section>
     </div>
+    @vite('resources/js/about.js')
 </x-template>
