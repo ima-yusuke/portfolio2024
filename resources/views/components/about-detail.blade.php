@@ -3,7 +3,7 @@
         <p class="text-white text-4xl absolute">{{$key}}</p>
     </div>
 
-    <div class="bg-white py-4 px-8 rounded-lg ml-[-20px] z-10">
+    <div class="bg-white py-4 px-8 rounded-lg ml-[-20px] z-10 flex-1 mr-[30px]">
         <p class="text-4xl">{{$value}}</p>
     </div>
 </div>
