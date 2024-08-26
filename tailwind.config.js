@@ -28,6 +28,10 @@ export default {
                 "bg-about-blue":"rgb(81,168,178)",
                 "bg-about-main":"rgb(227,136,129)",
                 "about-key":"rgb(100,100,144)",
+                "bg-ability":"rgb(247,226,112)",
+                "ability-key":"rgb(119,128,144)",
+                "ability-value":"rgb(248,248,216)",
+                "ability-img":"rgb(200,168,232)",
             }
         },
     },

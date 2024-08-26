@@ -75,7 +75,56 @@
     font-size: 12px;
 }
 
+.b-btn{
+    width:15px;
+    height: 15px;
+    background-color: white;
+    color: rgba(66, 86, 123, 0.8);
+    border: 2px solid rgba(0, 0, 0, 0.2);
+    border-radius: 50%;
+    box-shadow: inset -2px -2px 5px rgba(0, 0, 0, 0.6),
+    inset 2px 2px 5px rgba(255, 255, 255, 0.3),
+    2px 2px 5px rgba(0, 0, 0, 0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 8px;
+}
+
+
 span.under-line {
     background: linear-gradient(transparent 92%, #cfcf94 0%);
     display: inline;
 }
+
+#toeic_modal {
+    background-color: rgba(0, 0, 0, 0.8); /* 背景を黒で透過させる */
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.overflow-hidden {
+    overflow: hidden; /* モーダルが表示されている間、スクロールを無効にする */
+}
+
+/* テーブル全体のスタイル */
+table {
+    width: 100%;
+    border-collapse: collapse; /* セル間のボーダーを重ねない */
+}
+
+/* 各セルにボーダーを追加 */
+th, td {
+    border: 1px solid #000; /* セルのボーダー */
+    padding: 10px 15px; /* パディングを調整 */
+    text-align: left; /* テキストの左揃え */
+}
+
+/* 各セルの横幅を広く取る */
+th, td {
+    width: 33.33%; /* 必要に応じて調整 */
+}
+
