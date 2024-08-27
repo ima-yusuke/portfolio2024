@@ -1,5 +1,5 @@
 <x-template title="ポートフォリオ" css="app.css">
-    <div class="relative min-h-screen w-full bg-bg-battle-green">
+    <div class="relative min-h-screen w-full bg-battle-bg">
         {{--敵ポケモン--}}
         <section>
             {{--ポケモン詳細--}}
@@ -26,13 +26,13 @@
                     <x-field src="storage/img/pokemon02.png"></x-field>
                 </article>
 
-                <article class="w-[65%] h-full bg-bg-menu border-t-4 border-b-4 border-l-4 border-solid border-yellow-500 z-10">
+                <article class="w-[65%] h-full bg-battle-menu-bg border-t-4 border-b-4 border-l-4 border-solid border-yellow-500 z-10">
                     <div class="w-full h-full border-t-8 border-b-8 border-l-8 border-solid border-white p-6">
                         <h1 class="text-white text-5xl pl-10 pt-8">Yusuke Imaiは どうする？</h1>
                     </div>
                 </article>
                 <article class="h-full flex-1 rounded-lg ml-[-15px] z-50">
-                    <div class="bg-white flex flex-col justify-center gap-6 h-full border-solid border-menu-border rounded-lg" style="border-width: 10px; border-radius: 20px;">
+                    <div class="bg-white flex flex-col justify-center gap-6 h-full border-solid border-battle-menu-border rounded-lg" style="border-width: 10px; border-radius: 20px;">
                         <aside class="flex justify-center gap-20 text-4xl">
                             <p class="hoverable hover:cursor-pointer">たたかう</p>
                             <a href="/work" class="hoverable hover:cursor-pointer">バッグ</a>

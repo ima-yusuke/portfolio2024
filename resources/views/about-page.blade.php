@@ -117,15 +117,15 @@
     <div class="min-h-screen flex flex-col">
         {{--head（じょうほう）--}}
         <section class="flex items-center text-white text-5xl h-[100px]" id="head_info">
-            <div class="bg-bg-about-dot h-full flex items-center">
-                <h1 class="bg-bg-about-title h-full flex items-center px-8 rounded-r-full pr-8 border-r-4 border-solid border-about-dot">
+            <div class="bg-about-title-bg-light-blue h-full flex items-center">
+                <h1 class="bg-about-title-bg-brown h-full flex items-center px-8 rounded-r-full pr-8 border-r-4 border-solid border-about-title-dot">
                     ポケモンじょうほう●
                 </h1>
             </div>
-            <div class="bg-bg-about-command h-full">
-                <p class="text-about-dot bg-bg-about-dot h-full px-16 rounded-r-full flex items-center">●</p>
+            <div class="bg-about-title-bg-command h-full">
+                <p class="text-about-title-dot bg-about-title-bg-light-blue h-full px-16 rounded-r-full flex items-center">●</p>
             </div>
-            <div class="bg-bg-about-command py-4 flex-1 flex justify-center gap-14 max-h-[100px]">
+            <div class="bg-about-title-bg-command py-4 flex-1 flex justify-center gap-14 max-h-[100px]">
                 <div class="flex items-center gap-2">
                     <div class="cross-key-container relative">
                         <div class="btn cross-key-btn top-mark"></div>
@@ -145,15 +145,15 @@
 
         {{--head（のうりょく）--}}
         <section class="flex items-center text-white text-5xl h-[100px] hide" id="head_ability">
-            <div class="bg-bg-about-dot h-full flex items-center">
-                <h1 class="bg-bg-about-title h-full flex items-center px-16 rounded-r-full border-r-4 border-solid border-about-dot">
+            <div class="bg-about-title-bg-light-blue h-full flex items-center">
+                <h1 class="bg-about-title-bg-brown h-full flex items-center px-16 rounded-r-full border-r-4 border-solid border-about-title-dot">
                     ●
                 </h1>
             </div>
-            <div class="bg-bg-about-command h-full">
-                <p class="text-about-dot bg-bg-about-dot h-full px-8 rounded-r-full flex items-center">ポケモンのうりょく●</p>
+            <div class="bg-about-title-bg-command h-full">
+                <p class="text-about-title-dot bg-about-title-bg-light-blue h-full px-8 rounded-r-full flex items-center">ポケモンのうりょく●</p>
             </div>
-            <div class="bg-bg-about-command py-4 flex-1 flex justify-center gap-14 max-h-[100px]">
+            <div class="bg-about-title-bg-command py-4 flex-1 flex justify-center gap-14 max-h-[100px]">
                 <div class="flex items-center gap-2">
                     <div class="cross-key-container relative">
                         <div class="btn cross-key-btn top-mark"></div>
@@ -172,12 +172,12 @@
         </section>
 
         {{--main--}}
-        <section class="border-solid border-about-border w-full flex-1 bg-bg-about-main flex flex-col gap-6" style="border-width: 8px;" id="about_main">
+        <section class="border-solid border-about-border w-full flex-1 bg-info-bg flex flex-col gap-6" style="border-width: 8px;" id="about_main">
             {{--top--}}
             <article class="w-full flex">
                 {{--left--}}
                 <div class="w-[50%] border-solid border-about-border h-full" style=" border-right-width: 8px;border-bottom-width: 8px;">
-                    <div class="bg-bg-about-blue py-4" id="img_container">
+                    <div class="bg-info-img-bg py-4" id="img_container">
                         <aside class="flex justify-between text-white px-4 pb-2">
                             <p class="text-5xl">Lv27</p>
                             <p class="text-5xl">今井 祐輔 ♂</p>
@@ -194,7 +194,7 @@
                     <x-about-detail key="生年月日" value="1996.11.25"></x-about-detail>
                     <x-about-detail key="生息地" value="三重県"></x-about-detail>
                     <div class="flex items-center">
-                        <div class="bg-about-key relative rounded-full w-[230px] h-[40px] flex items-center justify-center z-20">
+                        <div class="bg-info-key-bg relative rounded-full w-[230px] h-[40px] flex items-center justify-center z-20">
                             <p class="text-white text-2xl absolute">目撃情報</p>
                         </div>
 
@@ -239,7 +239,7 @@
             <article class="flex justify-center" id="info_bottom_container">
                 <div class="w-[90%] bg-white rounded-lg relative">
                     <div class="absolute -top-[5%] -left-[2%]">
-                        <div class="bg-about-key relative rounded-full w-[450px] h-[40px] flex items-center justify-center z-20">
+                        <div class="bg-info-key-bg relative rounded-full w-[450px] h-[40px] flex items-center justify-center z-20">
                             <p class="text-white text-2xl absolute">トレーナーメモ</p>
                         </div>
                     </div>
@@ -254,9 +254,9 @@
 
             {{--bottom（のうりょく）--}}
             <article class="flex justify-center hide" id="ability_bottom_container">
-                <div class="w-[90%] bg-ability-value rounded-lg relative">
+                <div class="w-[90%] bg-ability-value-bg rounded-lg relative">
                     <div class="absolute -top-[10%] -left-[2%]">
-                        <div class="bg-ability-key relative rounded-full w-[450px] h-[40px] flex items-center justify-center z-20">
+                        <div class="bg-ability-key-bg relative rounded-full w-[450px] h-[40px] flex items-center justify-center z-20">
                             <p class="text-white text-2xl absolute">けいけんち</p>
                         </div>
                     </div>

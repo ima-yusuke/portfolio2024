@@ -1,5 +1,5 @@
 <div class="flex items-center">
-    <div class="bg-about-key relative rounded-full w-[230px] h-[40px] flex items-center justify-center z-20">
+    <div class="bg-info-key-bg relative rounded-full w-[230px] h-[40px] flex items-center justify-center z-20">
         <p class="text-white text-2xl absolute">{{$key}}</p>
     </div>
 
