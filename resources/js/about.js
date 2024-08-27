@@ -17,6 +17,9 @@ const SWITCH_TEXTS = document.getElementsByClassName('switch-text');
 const OPEN_TOEIC_MODAL = document.getElementById('open_toeic_modal');
 const CLOSE_TOEIC_MODAL = document.getElementById('close_toeic_modal');
 const TOEIC_MODAL = document.getElementById('toeic_modal');
+const OPEN_KNT_MODAL = document.getElementById('open_knt_modal');
+const CLOSE_KNT_MODAL = document.getElementById('close_knt_modal');
+const KNT_MODAL = document.getElementById('knt_modal');
 
 
 // どちらの画面を表示するかのフラグ
@@ -55,6 +58,20 @@ CLOSE_TOEIC_MODAL.addEventListener('click', () => {
     TOEIC_MODAL.classList.add('hide');
     TOEIC_MODAL.style.opacity = "0"; // モーダルを完全に非表示
     TOEIC_MODAL.style.zIndex = "-1"; // モーダルを最背面に表示
+    document.body.classList.remove("overflow-hidden"); // スクロールを有効にする
+})
+
+OPEN_KNT_MODAL.addEventListener('click', () => {
+    KNT_MODAL.classList.remove('hide');
+    KNT_MODAL.style.opacity = "1"; // モーダルを完全に表示
+    KNT_MODAL.style.zIndex = "100"; // モーダルを最前面に表示
+    document.body.classList.add("overflow-hidden"); // スクロールを無効にする
+})
+
+CLOSE_KNT_MODAL.addEventListener('click', () => {
+    KNT_MODAL.classList.add('hide');
+    KNT_MODAL.style.opacity = "0"; // モーダルを完全に非表示
+    KNT_MODAL.style.zIndex = "-1"; // モーダルを最背面に表示
     document.body.classList.remove("overflow-hidden"); // スクロールを有効にする
 })
 
