@@ -35,7 +35,7 @@
                     <div class="bg-white flex flex-col justify-center gap-6 h-full border-solid border-menu-border rounded-lg" style="border-width: 10px; border-radius: 20px;">
                         <aside class="flex justify-center gap-20 text-4xl">
                             <p class="hoverable hover:cursor-pointer">たたかう</p>
-                            <p class="hoverable hover:cursor-pointer">バッグ</p>
+                            <a href="/work" class="hoverable hover:cursor-pointer">バッグ</a>
                         </aside>
                         <aside class="flex justify-center gap-20 text-4xl">
                             <a href="/about" class="hoverable hover:cursor-pointer">ポケモン</a>
