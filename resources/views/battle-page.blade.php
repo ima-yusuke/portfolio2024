@@ -47,15 +47,3 @@
         </section>
     </div>
 </x-template>
-<style>
-    .hoverable:hover::before {
-        content: '▶';
-        margin-right: 0.5rem;
-        position: absolute;
-        left: 0;
-        transform: translateX(-100%);
-    }
-    .hoverable {
-        position: relative;
-    }
-</style>
