@@ -19,17 +19,17 @@ class WorkController extends Controller
         [
             "id" => 2,
             "name" => "Rehabiridge",
-            "overview" => "理学療法についてのまとめサイト。管理画面も作成したので、記事の追加、編集、削除ができる。またlaravel permissionを使用し、権限管理も実装。",
-            "background" => "友人からの依頼",
-            "language" => ["HTML", "CSS", "JavaScript", "PHP"],
+            "overview" => "理学療法についてのまとめサイト。ユーザーはログインしないと記事の中身が見れない設定（Laravel Permission）。管理画面では記事の追加・編集・削除・権限付与ができる。",
+            "background" => "友人からの依頼。SNSで情報発信をしているが、記事が増えてきたため、まとめるためのサイトを作成したいとのこと。会員制も現在検討中。",
+            "language" => ["Laravel","Laravel Permission","MySQL"],
             "image" => "work-rehabiridge.png",
             "url" => "https://rehabiridge.gummy-tech.com/"
         ],
         [
             "id" => 3,
             "name" => "面接技術的質問集",
-            "overview" => "エンジニア就活時に聞かれた技術的な質問をまとめたサイト。",
-            "background" => "面接時に聞かれて答えれなかったため、面接終了時に調べて、まとめ、面接をしてくれた企業に送っていたのが始まり。",
+            "overview" => "エンジニア就活時に聞かれた技術的な質問を自分なりに後日調べてまとめたもの。",
+            "background" => "面接時に聞かれて答えれなかったため、面接終了時に調べて、まとめ、面接をしてくれた企業に送っていたのが始まり。また、スクールを卒業して間もなくだったため、周りの就活中の友人にも共有したいと思い、公開することにした。",
             "language" => ["Next.js","Vercel"],
             "image" => "work-interview.png",
             "url" => "https://varinterview.vercel.app/"
@@ -38,16 +38,16 @@ class WorkController extends Controller
         "id" => 4,
         "name" => "オセロ",
         "overview" => "アルゴリズムの学習のために作成。対戦まではできないが、オセロの動作は再現。",
-        "background" => "アルゴリズムの学習",
-        "language" => ["Next.js"],
+        "background" => "アルゴリズムの学習。ライブラリーなどを使用せず、素のJavaScriptのみで作成。",
+        "language" => ["HTML","CSS","JavaScript"],
         "image" => "work-othello.png",
         "url" => "https://ima-yusuke.github.io/othello/"
         ],
         [
             "id" => 5,
-            "name" => "アルサーガパートナーズ",
+            "name" => "模写",
             "overview" => "模写",
-            "background" => "内定先のHPの模写",
+            "background" => "内定先のホームページの模写。この会社がReactを使用していることを知り、Reactの学習も兼ねて模写。",
             "language" => ["React"],
             "image" => "work-arsaga.png",
             "url" =>false
@@ -57,8 +57,8 @@ class WorkController extends Controller
     public $businessWorkData = [
         [
             "id" => 1,
-            "name" => "キクカワエンタープライズ（株）",
-            "overview" => "LP。Quillを使用し、簡単に更新できるように設計。",
+            "name" => "システム開発①",
+            "overview" => "採用特設サイト。CMSも1から開発しており、プログラミングの知識が全くなくても、サイト（テキスト、画像）を簡単に作成、編集、管理できる。また、画像のトリミングやサイズ変更も可能。",
             "background" => "採用サイトが古くなってきており更新したい。",
             "language" => ["Laravel","Quill"],
             "image" => "work-kikukawa.png",
@@ -66,9 +66,9 @@ class WorkController extends Controller
         ],
         [
             "id" => 2,
-            "name" => "（株）三秀",
+            "name" => "LP（ランディングページ）①",
             "overview" => "LP。採用サイト。",
-            "background" => "採用サイトを更新する予定のクライアント。学習を兼ねて現在のサイトを模写。",
+            "background" => "採用サイトを更新する予定のクライアント。新サイトが出来るまでのLPを作成。（現在のサイトを模写）。",
             "language" => ["Laravel"],
             "image" => "work-sansyu.png",
             "url" => "https://sansyu.jobcruise.jp/"
