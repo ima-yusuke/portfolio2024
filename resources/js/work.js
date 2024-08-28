@@ -20,34 +20,38 @@ setData(BTN_PERSONAL_MENU,personalWorkData);
 RIGHT_ARROW.addEventListener("click",function () {
     if(currentPageFlag){
         setData(BTN_BUSINESS_MENU,businessWorkData);
-        TEXT_CURRENT_PAGE.innerText = "会社開発";
-        CONTAINER_PERSONAL_MENU.classList.add("hide");
-        CONTAINER_BUSINESS_MENU.classList.remove("hide");
-        currentPageFlag = false;
+        SwitchView("会社開発",CONTAINER_PERSONAL_MENU,CONTAINER_BUSINESS_MENU,false,businessWorkData);
     }else{
         setData(BTN_PERSONAL_MENU,personalWorkData);
-        TEXT_CURRENT_PAGE.innerText = "個人開発";
-        CONTAINER_BUSINESS_MENU.classList.add("hide");
-        CONTAINER_PERSONAL_MENU.classList.remove("hide");
-        currentPageFlag = true;
+        SwitchView("個人開発",CONTAINER_BUSINESS_MENU,CONTAINER_PERSONAL_MENU,true,personalWorkData);
     }
 })
 
 LEFT_ARROW.addEventListener("click",function () {
     if(currentPageFlag){
         setData(BTN_BUSINESS_MENU,businessWorkData);
-        TEXT_CURRENT_PAGE.innerText = "会社開発";
-        CONTAINER_PERSONAL_MENU.classList.add("hide");
-        CONTAINER_BUSINESS_MENU.classList.remove("hide");
-        currentPageFlag = false;
+        SwitchView("会社開発",CONTAINER_PERSONAL_MENU,CONTAINER_BUSINESS_MENU,false,businessWorkData);
     }else{
         setData(BTN_PERSONAL_MENU,personalWorkData);
-        TEXT_CURRENT_PAGE.innerText = "個人開発";
-        CONTAINER_BUSINESS_MENU.classList.add("hide");
-        CONTAINER_PERSONAL_MENU.classList.remove("hide");
-        currentPageFlag = true;
+        SwitchView("個人開発",CONTAINER_BUSINESS_MENU,CONTAINER_PERSONAL_MENU,true,personalWorkData);
     }
 })
+
+function SwitchView(Title,HideElement,ShowElement,Flag,DATA) {
+    TEXT_CURRENT_PAGE.innerText = Title;
+    HideElement.classList.add("hide");
+    ShowElement.classList.remove("hide");
+    currentPageFlag = Flag;
+    TEXT_OVERVIEW.innerText = DATA[0].overview;
+    TEXT_BACKGROUND.innerText = DATA[0].background;
+    IMG_WORK.src = "storage/img/"+DATA[0].image;
+    removeChild();
+    DATA[0].language.forEach(language => {
+        let newLanguage = document.createElement("p");
+        newLanguage.innerText = language;
+        CONTAINER_LANGUAGE.appendChild(newLanguage);
+    });
+}
 
 function setData(BTN,DATA){
     for (let i = 0; i < BTN.length; i++) {
