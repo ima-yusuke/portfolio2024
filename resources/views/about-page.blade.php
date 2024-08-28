@@ -208,29 +208,29 @@
                 {{--right（のうりょく）--}}
                 <div class="ml-4 h-full w-[50%] flex flex-col gap-6 my-4 hide" id="ability_right_container">
                     <x-language-container key="マークアップ言語">
-                        <x-language src="storage/img/html.png" language="HTML"></x-language>
-                        <x-language src="storage/img/css.png" language="CSS"></x-language>
-                        <x-language src="storage/img/sass.png" language="Sass(SCSS)"></x-language>
+                        <x-language src="storage/img/language-html.png" language="HTML"></x-language>
+                        <x-language src="storage/img/language-css.png" language="CSS"></x-language>
+                        <x-language src="storage/img/language-sass.png" language="Sass(SCSS)"></x-language>
                     </x-language-container>
                     <x-language-container key="プログラミング言語">
-                        <x-language src="storage/img/javascript.svg" language="JavaScript"></x-language>
-                        <x-language src="storage/img/nodejs.png" language="Node.js"></x-language>
-                        <x-language src="storage/img/jquery.png" language="JQuery"></x-language>
-                        <x-language src="storage/img/php.png" language="PHP"></x-language>
+                        <x-language src="storage/img/language-javascript.svg" language="JavaScript"></x-language>
+                        <x-language src="storage/img/language-nodejs.png" language="Node.js"></x-language>
+                        <x-language src="storage/img/language-jquery.png" language="JQuery"></x-language>
+                        <x-language src="storage/img/language-php.png" language="PHP"></x-language>
                     </x-language-container>
                     <x-language-container key="フレームワーク">
-                        <x-language src="storage/img/laravel.svg" language="Laravel"></x-language>
-                        <x-language src="storage/img/nextjs.svg" language="Next.js"></x-language>
-                        <x-language src="storage/img/react.png" language="React"></x-language>
-                        <x-language src="storage/img/vue.png" language="Vue.js"></x-language>
-                        <x-language src="storage/img/angularjs.png" language="AngularJS"></x-language>
+                        <x-language src="storage/img/language-laravel.svg" language="Laravel"></x-language>
+                        <x-language src="storage/img/language-nextjs.svg" language="Next.js"></x-language>
+                        <x-language src="storage/img/language-react.png" language="React"></x-language>
+                        <x-language src="storage/img/language-vue.png" language="Vue.js"></x-language>
+                        <x-language src="storage/img/language-angularjs.png" language="AngularJS"></x-language>
                     </x-language-container>
                     <x-language-container key="ツール">
-                        <x-language src="storage/img/github.svg" language="Git,GitHub"></x-language>
-                        <x-language src="storage/img/tailwindcss.svg" language="Tailwind CSS"></x-language>
-                        <x-language src="storage/img/bootstrap.svg" language="Bootstrap"></x-language>
-                        <x-language src="storage/img/docker.png" language="Docker"></x-language>
-                        <x-language src="storage/img/mysql.png" language="MySQL"></x-language>
+                        <x-language src="storage/img/language-github.svg" language="Git,GitHub"></x-language>
+                        <x-language src="storage/img/language-tailwindcss.svg" language="Tailwind CSS"></x-language>
+                        <x-language src="storage/img/language-bootstrap.svg" language="Bootstrap"></x-language>
+                        <x-language src="storage/img/language-docker.png" language="Docker"></x-language>
+                        <x-language src="storage/img/language-mysql.png" language="MySQL"></x-language>
                     </x-language-container>
                 </div>
             </article>
