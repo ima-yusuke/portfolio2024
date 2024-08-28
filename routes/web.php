@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\WorkController;
 
 Route::get('/', function () {
     return view('battle-page');
@@ -11,9 +12,7 @@ Route::get('/about', function () {
     return view('about-page');
 });
 
-Route::get('/work', function () {
-    return view('work-page');
-});
+Route::get('/work', [WorkController::class, 'ShowWork'])->name('ShowWork');
 
 Route::get('/dashboard', function () {
     return view('dashboard');
