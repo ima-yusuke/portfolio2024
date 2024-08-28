@@ -190,9 +190,9 @@
 
                 {{--right（じょうほう）--}}
                 <div class="ml-4 h-full w-[50%] flex flex-col gap-6 my-4" id="info_right_container">
-                    <x-about-detail key="なまえ" value="今井 祐輔 （いまい ゆうすけ）"></x-about-detail>
-                    <x-about-detail key="生年月日" value="1996.11.25"></x-about-detail>
-                    <x-about-detail key="生息地" value="三重県"></x-about-detail>
+                    <x-info-detail key="なまえ" value="今井 祐輔 （いまい ゆうすけ）"></x-info-detail>
+                    <x-info-detail key="生年月日" value="1996.11.25"></x-info-detail>
+                    <x-info-detail key="生息地" value="三重県"></x-info-detail>
                     <div class="flex items-center">
                         <div class="bg-info-key-bg relative rounded-full w-[230px] h-[40px] flex items-center justify-center z-20">
                             <p class="text-white text-2xl absolute">目撃情報</p>
@@ -202,36 +202,36 @@
                             <p class="text-3xl">🇯🇵🇺🇸🇨🇦🇬🇧🇫🇷🇩🇪🇳🇱🇧🇪🇹🇭🇹🇼🇻🇳🇬🇺</p>
                         </div>
                     </div>
-                    <x-about-detail key="コンタクト" value="yu_suke1125aadxyz@icloud.com"></x-about-detail>
+                    <x-info-detail key="コンタクト" value="yu_suke1125aadxyz@icloud.com"></x-info-detail>
                 </div>
 
                 {{--right（のうりょく）--}}
                 <div class="ml-4 h-full w-[50%] flex flex-col gap-6 my-4 hide" id="ability_right_container">
-                    <x-language-container key="マークアップ言語">
-                        <x-language src="storage/img/language-html.png" language="HTML"></x-language>
-                        <x-language src="storage/img/language-css.png" language="CSS"></x-language>
-                        <x-language src="storage/img/language-sass.png" language="Sass(SCSS)"></x-language>
-                    </x-language-container>
-                    <x-language-container key="プログラミング言語">
-                        <x-language src="storage/img/language-javascript.svg" language="JavaScript"></x-language>
-                        <x-language src="storage/img/language-nodejs.png" language="Node.js"></x-language>
-                        <x-language src="storage/img/language-jquery.png" language="JQuery"></x-language>
-                        <x-language src="storage/img/language-php.png" language="PHP"></x-language>
-                    </x-language-container>
-                    <x-language-container key="フレームワーク">
-                        <x-language src="storage/img/language-laravel.svg" language="Laravel"></x-language>
-                        <x-language src="storage/img/language-nextjs.svg" language="Next.js"></x-language>
-                        <x-language src="storage/img/language-react.png" language="React"></x-language>
-                        <x-language src="storage/img/language-vue.png" language="Vue.js"></x-language>
-                        <x-language src="storage/img/language-angularjs.png" language="AngularJS"></x-language>
-                    </x-language-container>
-                    <x-language-container key="ツール">
-                        <x-language src="storage/img/language-github.svg" language="Git,GitHub"></x-language>
-                        <x-language src="storage/img/language-tailwindcss.svg" language="Tailwind CSS"></x-language>
-                        <x-language src="storage/img/language-bootstrap.svg" language="Bootstrap"></x-language>
-                        <x-language src="storage/img/language-docker.png" language="Docker"></x-language>
-                        <x-language src="storage/img/language-mysql.png" language="MySQL"></x-language>
-                    </x-language-container>
+                    <x-ability-language-container key="マークアップ言語">
+                        <x-ability-language src="storage/img/language-html.png" language="HTML"></x-ability-language>
+                        <x-ability-language src="storage/img/language-css.png" language="CSS"></x-ability-language>
+                        <x-ability-language src="storage/img/language-sass.png" language="Sass(SCSS)"></x-ability-language>
+                    </x-ability-language-container>
+                    <x-ability-language-container key="プログラミング言語">
+                        <x-ability-language src="storage/img/language-javascript.svg" language="JavaScript"></x-ability-language>
+                        <x-ability-language src="storage/img/language-nodejs.png" language="Node.js"></x-ability-language>
+                        <x-ability-language src="storage/img/language-jquery.png" language="JQuery"></x-ability-language>
+                        <x-ability-language src="storage/img/language-php.png" language="PHP"></x-ability-language>
+                    </x-ability-language-container>
+                    <x-ability-language-container key="フレームワーク">
+                        <x-ability-language src="storage/img/language-laravel.svg" language="Laravel"></x-ability-language>
+                        <x-ability-language src="storage/img/language-nextjs.svg" language="Next.js"></x-ability-language>
+                        <x-ability-language src="storage/img/language-react.png" language="React"></x-ability-language>
+                        <x-ability-language src="storage/img/language-vue.png" language="Vue.js"></x-ability-language>
+                        <x-ability-language src="storage/img/language-angularjs.png" language="AngularJS"></x-ability-language>
+                    </x-ability-language-container>
+                    <x-ability-language-container key="ツール">
+                        <x-ability-language src="storage/img/language-github.svg" language="Git,GitHub"></x-ability-language>
+                        <x-ability-language src="storage/img/language-tailwindcss.svg" language="Tailwind CSS"></x-ability-language>
+                        <x-ability-language src="storage/img/language-bootstrap.svg" language="Bootstrap"></x-ability-language>
+                        <x-ability-language src="storage/img/language-docker.png" language="Docker"></x-ability-language>
+                        <x-ability-language src="storage/img/language-mysql.png" language="MySQL"></x-ability-language>
+                    </x-ability-language-container>
                 </div>
             </article>
 

@@ -4,12 +4,12 @@
         <section>
             {{--ポケモン詳細--}}
             <article class="pt-8 pl-32">
-                <x-pokemon-detail name="ヌオー" sex="♀" hp="80" level="100" flag="false"></x-pokemon-detail>
+                <x-battle-pokemon-detail name="ヌオー" sex="♀" hp="80" level="100" flag="false"></x-battle-pokemon-detail>
             </article>
 
             {{--ポケモンイラスト--}}
             <article class="flex justify-end mr-10">
-                <x-field src="storage/img/pokemon01.png"></x-field>
+                <x-battle-field src="storage/img/pokemon01.png"></x-battle-field>
             </article>
         </section>
 
@@ -17,13 +17,13 @@
         <section class="absolute bottom-0 w-full">
             {{--ポケモン詳細--}}
             <article class="flex justify-end mr-24 mb-4">
-                <x-pokemon-detail name="Yusuke Imai" sex="♂" hp="60" level="27" flag="true"></x-pokemon-detail>
+                <x-battle-pokemon-detail name="Yusuke Imai" sex="♂" hp="60" level="27" flag="true"></x-battle-pokemon-detail>
             </article>
 
             <div class="flex h-[200px] w-full relative">
                 {{--ポケモンイラスト--}}
                 <article class="flex justify-start pl-10 absolute -top-[60%]">
-                    <x-field src="storage/img/pokemon02.png"></x-field>
+                    <x-battle-field src="storage/img/pokemon02.png"></x-battle-field>
                 </article>
 
                 <article class="w-[65%] h-full bg-battle-menu-bg border-t-4 border-b-4 border-l-4 border-solid border-yellow-500 z-10">
