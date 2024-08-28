@@ -105,14 +105,10 @@
         </div>
     </div>
 
-    {{--KNTモダルopen時の背景黒幕--}}
-    <div class="hide fixed min-h-screen w-full flex flex-col justify-center items-center bg-black -z-10" id="knt_modal">
-        {{--モダルコンテナ--}}
-        <div class="w-[80%] flex flex-col items-center justify-center relative rounded-md">
-            <button class="absolute -top-4 -right-4 text-2xl w-[50px] h-[50px] bg-red-500 text-white rounded-full" id="close_knt_modal">X</button>
-            <img src="{{asset('storage/img/knt.jpeg')}}" class="w-full h-[750px] object-cover">
-        </div>
-    </div>
+    {{--KNTモダル--}}
+    <x-ability-modal name="knt" src="storage/img/knt.jpeg"></x-ability-modal>
+    {{--Tamwoodモダル--}}
+    <x-ability-modal name="tamwood" src="storage/img/tamwood.jpeg"></x-ability-modal>
 
     <div class="min-h-screen flex flex-col">
         {{--head（じょうほう）--}}
@@ -265,7 +261,7 @@
                             ■語学：<span class="text-blue-500 hover:cursor-pointer" id="open_toeic_modal">TOEIC 870点</span>（2024.5）、<a href="https://www.queensu.ca/" target="_blank" class="text-blue-500">Queen's University</a>（語学学校卒業）、
                             <a href="https://tamwood.com/" target="_blank" class="text-blue-500">Tamwood Language School</a>（語学学校卒業）<br>
                             ■営業：近畿日本ツーリスト株式会社 <span class="text-blue-500 hover:cursor-pointer" id="open_knt_modal">新人賞受賞</span>（年間予算達成・10年ぶりの基幹校契約 売上高 32,000千円）<br>
-                            ■プログラミング：<a href="https://tamwood.com/study-work/web-developer/" target="_blank" class="text-blue-500">Tamwood Career</a>（Web Developmentコース卒業 / Diploma取得）
+                            ■プログラミング：<a href="https://tamwood.com/study-work/web-developer/" target="_blank" class="text-blue-500">Tamwood Career</a>（Web Developmentコース卒業 / <span class="text-blue-500 hover:cursor-pointer" id="open_tamwood_modal">Diploma取得</span>）
                         </span>
                     </p>
                 </div>

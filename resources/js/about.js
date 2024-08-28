@@ -20,7 +20,9 @@ const TOEIC_MODAL = document.getElementById('toeic_modal');
 const OPEN_KNT_MODAL = document.getElementById('open_knt_modal');
 const CLOSE_KNT_MODAL = document.getElementById('close_knt_modal');
 const KNT_MODAL = document.getElementById('knt_modal');
-
+const OPEN_TAMWOOD_MODAL = document.getElementById('open_tamwood_modal');
+const CLOSE_TAMWOOD_MODAL = document.getElementById('close_tamwood_modal');
+const TAMWOOD_MODAL = document.getElementById('tamwood_modal');
 
 // どちらの画面を表示するかのフラグ
 let flag = true;
@@ -47,33 +49,32 @@ for (let i = 0; i < SWITCH_TEXTS.length; i++) {
     })
 }
 
-OPEN_TOEIC_MODAL.addEventListener('click', () => {
-    TOEIC_MODAL.classList.remove('hide');
-    TOEIC_MODAL.style.opacity = "1"; // モーダルを完全に表示
-    TOEIC_MODAL.style.zIndex = "100"; // モーダルを最前面に表示
-    document.body.classList.add("overflow-hidden"); // スクロールを無効にする
-})
+OpenModal(TOEIC_MODAL,OPEN_TOEIC_MODAL);
+CloseModal(TOEIC_MODAL,CLOSE_TOEIC_MODAL);
 
-CLOSE_TOEIC_MODAL.addEventListener('click', () => {
-    TOEIC_MODAL.classList.add('hide');
-    TOEIC_MODAL.style.opacity = "0"; // モーダルを完全に非表示
-    TOEIC_MODAL.style.zIndex = "-1"; // モーダルを最背面に表示
-    document.body.classList.remove("overflow-hidden"); // スクロールを有効にする
-})
+OpenModal(KNT_MODAL,OPEN_KNT_MODAL);
+CloseModal(KNT_MODAL,CLOSE_KNT_MODAL);
 
-OPEN_KNT_MODAL.addEventListener('click', () => {
-    KNT_MODAL.classList.remove('hide');
-    KNT_MODAL.style.opacity = "1"; // モーダルを完全に表示
-    KNT_MODAL.style.zIndex = "100"; // モーダルを最前面に表示
-    document.body.classList.add("overflow-hidden"); // スクロールを無効にする
-})
+OpenModal(TAMWOOD_MODAL,OPEN_TAMWOOD_MODAL);
+CloseModal(TAMWOOD_MODAL,CLOSE_TAMWOOD_MODAL);
 
-CLOSE_KNT_MODAL.addEventListener('click', () => {
-    KNT_MODAL.classList.add('hide');
-    KNT_MODAL.style.opacity = "0"; // モーダルを完全に非表示
-    KNT_MODAL.style.zIndex = "-1"; // モーダルを最背面に表示
-    document.body.classList.remove("overflow-hidden"); // スクロールを有効にする
-})
+function OpenModal(MODAL,BTN){
+    BTN.addEventListener('click', () => {
+        MODAL.classList.remove('hide');
+        MODAL.style.opacity = "1"; // モーダルを完全に表示
+        MODAL.style.zIndex = "100"; // モーダルを最前面に表示
+        document.body.classList.add("overflow-hidden"); // スクロールを無効にする
+    })
+}
+
+function CloseModal(MODAL,BTN){
+    BTN.addEventListener('click', () => {
+        MODAL.classList.add('hide');
+        MODAL.style.opacity = "0"; // モーダルを完全に非表示
+        MODAL.style.zIndex = "-1"; // モーダルを最背面に表示
+        document.body.classList.remove("overflow-hidden"); // スクロールを有効にする
+    })
+}
 
 // TOEIC受験歴/スクロールヒント
 document.addEventListener('DOMContentLoaded', function() {
