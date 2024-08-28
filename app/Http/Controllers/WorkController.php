@@ -10,9 +10,9 @@ class WorkController extends Controller
         [
             "id" => 1,
             "name" => "英単語帳",
-            "overview" => "英単語を覚えるためのアプリ",
-            "background" => "自分だけのアプリが欲しかった",
-            "language" => ["HTML", "CSS", "JavaScript", "PHP", "MySQL"],
+            "overview" => "英単語を登録、編集、削除できるメモサイト。",
+            "background" => "趣味である洋画を見ている時に分からない単語をiphoneのメモに書いていた。しかし、単語数が増えてきて、メモが見づらくなったため、自分で作成することを思い立った。",
+            "language" => ["Laravel", "MySQL"],
             "image" => "work-english.png",
             "url" => "https://imai.gummy-tech.com"
         ],

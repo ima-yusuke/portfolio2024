@@ -17,25 +17,22 @@
 
                 {{--説明文--}}
                 <div class="bg-white rounded-2xl w-full flex-1 ml-8 p-4 pr-10 flex flex-col gap-4">
-                    <aside class="flex flex-col">
-                        <h2>サービス概要</h2>
+                    <x-work-details title="サービス概要">
                         <p id="text_overview">{{$personalWorkData[0]["overview"]}}</p>
-                    </aside>
-                    <aside class="flex flex-col">
-                        <h2>開発背景</h2>
+                    </x-work-details>
+                    <x-work-details title="開発背景">
                         <p id="text_background">{{$personalWorkData[0]["background"]}}</p>
-                    </aside>
-                    <aside class="flex flex-col">
-                        <h2>使用言語</h2>
+                    </x-work-details>
+                    <x-work-details title="使用言語・ライブラリー">
                         <div class="flex gap-2" id="container_language">
                             @foreach($personalWorkData[0]["language"] as $p_language)
-                                <p>{{$p_language}} /</p>
+                                <p>{{$p_language}}</p>
                             @endforeach
                         </div>
-                    </aside>
-                    <aside class="flex flex-col">
-                        <a href="{{$personalWorkData[0]["url"]}}" target="_blank" class="text-blue-500" id="text_url">リンク</a>
-                    </aside>
+                    </x-work-details>
+                    <x-work-details title="サイトリンク">
+                        <a href="{{$personalWorkData[0]["url"]}}" target="_blank" class="text-blue-500" id="text_url">こちら</a>
+                    </x-work-details>
                 </div>
             </div>
         </article>

@@ -52,13 +52,13 @@ LEFT_ARROW.addEventListener("click",function () {
 function setData(BTN,DATA){
     for (let i = 0; i < BTN.length; i++) {
         BTN[i].addEventListener("click",function () {
-            TEXT_URL.classList.remove("hide");
+            TEXT_URL.parentNode.classList.remove("hide");
             let id = BTN[i].id;
             let newData = DATA.find(work => work.id == id);
             TEXT_OVERVIEW.innerText = newData.overview;
             TEXT_BACKGROUND.innerText = newData.background;
             if(newData.url === false){
-                TEXT_URL.classList.add("hide");
+                TEXT_URL.parentNode.classList.add("hide");
             }else{
                 TEXT_URL.href = newData.url;
             }
