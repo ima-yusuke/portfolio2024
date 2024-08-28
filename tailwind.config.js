@@ -8,6 +8,10 @@ export default {
         './storage/framework/views/*.php',
         './resources/views/**/*.blade.php',
     ],
+    safelist: [
+        'bg-ability-bg',
+        'bg-ability-img-bg',
+    ],
 
     theme: {
         extend: {

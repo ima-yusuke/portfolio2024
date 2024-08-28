@@ -5,7 +5,7 @@
         <div class="w-[80%] flex flex-col items-center justify-center relative rounded-md">
             <button class="absolute -top-4 -right-4 text-2xl w-[50px] h-[50px] bg-red-500 text-white rounded-full" id="close_toeic_modal">X</button>
             <img src="{{asset('storage/img/toeic.jpeg')}}" class="w-full h-[400px] object-cover">
-            <aside class="bg-ability-value w-full flex flex-col items-center justify-center relative max-h-[350px]">
+            <aside class="bg-ability-value-bg w-full flex flex-col items-center justify-center relative max-h-[350px]">
                 {{--スクロールヒント--}}
                 <div id="scroll_indicator" class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-black opacity-50 w-[200px] h-[100px] flex justify-center items-center rounded-lg">
                     <p class="text-white text-center text-2xl">スクロール↓</p>
@@ -14,7 +14,7 @@
                 <div class="overflow-y-scroll flex flex-col w-full">
                     <div class="w-full flex justify-center items-start gap-8">
                         <table>
-                            <thead class="bg-ability-key text-white">
+                            <thead class="bg-ability-key-bg text-white">
                             <tr>
                                 <th>受験回数（計15回）</th>
                                 <th>受験日</th>
