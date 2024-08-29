@@ -4,12 +4,11 @@
         <div class="flex items-center justify-between md:gap-20 pt-2 px-2">
             <aside class="flex items-center gap-1">
                 <p class="md:text-3xl pl-1 md:pl-4">{{$name}}</p>
-                <p class="text-blue-400 md:text-3xl">{{$sex}}</p>
-{{--                @if($sex=="♂")--}}
-{{--                    <p class="text-blue-400 md:text-3xl">{{$sex}}</p>--}}
-{{--                @else--}}
-{{--                    <p class="text-pink-400 md:text-3xl">{{$sex}}</p>--}}
-{{--                @endif--}}
+                @if($sex=="♂")
+                    <p class="text-blue-400 md:text-3xl">{{$sex}}</p>
+                @else
+                    <p class="text-pink-400 md:text-3xl">{{$sex}}</p>
+                @endif
             </aside>
             <p class="md:text-3xl">Lv:{{$level}}</p>
         </div>
