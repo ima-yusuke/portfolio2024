@@ -45,7 +45,7 @@ function SwitchView(Title,HideElement,ShowElement,Flag,DATA,MobileHideElement,Mo
     removeChild();
     DATA[0].language.forEach(language => {
         let newLanguage = document.createElement("p");
-        newLanguage.classList.add("text-sm");
+        newLanguage.classList.add("text-sm","text-gray-700");
         newLanguage.innerText = language;
         CONTAINER_LANGUAGE.appendChild(newLanguage);
     });
@@ -69,7 +69,7 @@ function setData(BTN,DATA){
             removeChild();
             newData.language.forEach(language => {
                 let newLanguage = document.createElement("p");
-                newLanguage.classList.add("text-sm");
+                newLanguage.classList.add("text-sm","text-gray-700");
                 newLanguage.innerText = language;
                 CONTAINER_LANGUAGE.appendChild(newLanguage);
             });

@@ -18,18 +18,18 @@
                 {{--説明文--}}
                 <div class="bg-white rounded-2xl w-[90%] md:w-full flex-1 md:ml-8 p-4 md:pr-10 flex flex-col gap-4 overflow-y-scroll">
                     <x-work-details title="サービス名">
-                        <p id="text_name" class="text-sm leading-loose">{{$personalWorkData[0]["name"]}}</p>
+                        <p id="text_name" class="text-sm leading-loose text-gray-700">{{$personalWorkData[0]["name"]}}</p>
                     </x-work-details>
                     <x-work-details title="サービス概要">
-                        <p id="text_overview" class="text-sm leading-loose">{{$personalWorkData[0]["overview"]}}</p>
+                        <p id="text_overview" class="text-sm leading-loose text-gray-700">{{$personalWorkData[0]["overview"]}}</p>
                     </x-work-details>
                     <x-work-details title="開発背景">
-                        <p id="text_background" class="text-sm leading-loose">{{$personalWorkData[0]["background"]}}</p>
+                        <p id="text_background" class="text-sm leading-loose text-gray-700">{{$personalWorkData[0]["background"]}}</p>
                     </x-work-details>
                     <x-work-details title="使用言語等">
                         <div class="flex gap-2" id="container_language">
                             @foreach($personalWorkData[0]["language"] as $p_language)
-                                <p class="text-sm">{{$p_language}}</p>
+                                <p class="text-sm text-gray-700">{{$p_language}}</p>
                             @endforeach
                         </div>
                     </x-work-details>
