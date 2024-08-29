@@ -40,6 +40,7 @@ export default {
                 "work-border-r-container":"rgb(41,88,121)",
                 "work-dark-yellow":"rgb(253,195,89)",
                 "work-light-yellow":"rgb(252,227,169)",
+                "work-command-bg":"rgb(105,92,162)",
             }
         },
     },

@@ -87,8 +87,8 @@
 }
 
 .b-btn{
-    width:15px;
-    height: 15px;
+    width:40px;
+    height: 40px;
     background-color: white;
     color: rgba(66, 86, 123, 0.8);
     border: 2px solid rgba(0, 0, 0, 0.2);
@@ -99,12 +99,18 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 8px;
+    font-size: 16px;
+}@media (max-width: 768px) {
+    .b-btn {
+        font-size: 8px;
+        width:15px;
+        height: 15px;
+    }
 }
 
 .l-btn{
-    width:40px;
-    height: 28px;
+    width:60px;
+    height: 40px;
     background-color: white;
     color: rgba(66, 86, 123, 0.8);
     border: 2px solid rgba(0, 0, 0, 0.2);
@@ -115,12 +121,18 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 12px;
+    font-size: 16px;
+}@media (max-width: 768px) {
+    .l-btn {
+        font-size: 12px;
+        width:40px;
+        height: 28px;
+    }
 }
 
 .r-btn{
-    width:40px;
-    height: 28px;
+    width:60px;
+    height: 40px;
     background-color: white;
     color: rgba(66, 86, 123, 0.8);
     border: 2px solid rgba(0, 0, 0, 0.2);
@@ -131,7 +143,13 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 12px;
+    font-size: 16px;
+}@media (max-width: 768px) {
+    .r-btn {
+        font-size: 12px;
+        width:40px;
+        height: 28px;
+    }
 }
 
 

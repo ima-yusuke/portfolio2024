@@ -1,7 +1,7 @@
 <x-template title="ポートフォリオ" css="app.css">
     <section class="flex w-full h-full bg-work-bg">
         {{--左側--}}
-        <article class="w-full md:w-1/2 flex flex-col pt-6 md:pt-0">
+        <article class="w-full md:w-1/2 flex flex-col pt-6 md:pt-8">
             {{--画像--}}
             <div class="h-1/2 w-full flex items-center justify-center">
                 <img src="{{asset("storage/img/".$personalWorkData[0]["image"])}}" alt="work" class="w-[90%] h-[250px] md:w-[80%] md:h-[80%] object-cover rounded-lg" id="work_img">
@@ -45,27 +45,25 @@
             </div>
         </article>
 
-{{--以下、モバイル用--}}
-
         {{--haedボタン--}}
-        <div class="fixed top-2 flex justify-center w-full gap-4 md:hidden">
-            {{--切り替え-L-btn--}}
+        <div class="fixed flex justify-center md:justify-between py-2 md:px-8 w-full gap-4 md:gap-8 bg-work-command-bg opacity-90">
+            {{--切り替え-L-R-btn--}}
             <div class="flex items-center gap-1">
                 <p class="l-btn arrow">L</p>
-                <p class="switch-text cursor-pointer text-sm">きりかえ</p>
+                <p class="switch-text cursor-pointer text-sm text-white">きりかえ</p>
                 <p class="r-btn arrow">R</p>
             </div>
 
             {{--open-btn--}}
             <div class="flex items-center gap-1 md:hidden cursor-pointer" id="hamburger_icon">
                 <p class="a-btn">A</p>
-                <p class="text-sm">ひらく</p>
+                <p class="text-sm text-white">ひらく</p>
             </div>
 
             {{--close-work-btn--}}
-            <div class="flex items-center gap-1 md:hidden cursor-pointer">
+            <div class="flex items-center gap-1 cursor-pointer">
                 <a href="/" class="a-btn">B</a>
-                <a href="/" class="text-sm">バトル</a>
+                <a href="/" class="text-sm text-white">バトル</a>
             </div>
         </div>
 
