@@ -32,10 +32,10 @@ RIGHT_ARROW.addEventListener("click",function () {
 LEFT_ARROW.addEventListener("click",function () {
     if(currentPageFlag){
         setData(BTN_BUSINESS_MENU,businessWorkData);
-        SwitchView("会社開発",CONTAINER_PERSONAL_MENU,CONTAINER_BUSINESS_MENU,false,businessWorkData);
+        SwitchView("会社開発",CONTAINER_PERSONAL_MENU,CONTAINER_BUSINESS_MENU,false,businessWorkData,MOBILE_PERSONAL_MENU,MOBILE_BUSINESS_MENU);
     }else{
         setData(BTN_PERSONAL_MENU,personalWorkData);
-        SwitchView("個人開発",CONTAINER_BUSINESS_MENU,CONTAINER_PERSONAL_MENU,true,personalWorkData);
+        SwitchView("個人開発",CONTAINER_BUSINESS_MENU,CONTAINER_PERSONAL_MENU,true,personalWorkData,MOBILE_BUSINESS_MENU,MOBILE_PERSONAL_MENU);
     }
 })
 
