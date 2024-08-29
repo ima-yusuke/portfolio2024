@@ -17,6 +17,9 @@
 
                 {{--説明文--}}
                 <div class="bg-white rounded-2xl w-[90%] md:w-full flex-1 md:ml-8 p-4 md:pr-10 flex flex-col gap-4 overflow-y-scroll">
+                    <x-work-details title="サービス名">
+                        <p id="text_name" class="text-sm leading-loose">{{$personalWorkData[0]["name"]}}</p>
+                    </x-work-details>
                     <x-work-details title="サービス概要">
                         <p id="text_overview" class="text-sm leading-loose">{{$personalWorkData[0]["overview"]}}</p>
                     </x-work-details>

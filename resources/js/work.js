@@ -10,6 +10,7 @@ const MOBILE_BUSINESS_MENU = document.getElementById("container_mobile_business_
 const CONTAINER_LANGUAGE = document.getElementById("container_language");
 const BTN_PERSONAL_MENU = document.getElementsByClassName("personal_btn");
 const BTN_BUSINESS_MENU = document.getElementsByClassName("business_btn");
+const TEXT_NAME = document.getElementById("text_name");
 const TEXT_OVERVIEW = document.getElementById("text_overview");
 const TEXT_BACKGROUND = document.getElementById("text_background");
 const TEXT_URL = document.getElementById("text_url");
@@ -37,6 +38,7 @@ function SwitchView(Title,HideElement,ShowElement,Flag,DATA,MobileHideElement,Mo
     MobileHideElement.classList.add("hide");
     MobileShowElement.classList.remove("hide");
     currentPageFlag = Flag;
+    TEXT_NAME.innerText = DATA[0].name;
     TEXT_OVERVIEW.innerText = DATA[0].overview;
     TEXT_BACKGROUND.innerText = DATA[0].background;
     IMG_WORK.src = "storage/img/"+DATA[0].image;
@@ -55,6 +57,7 @@ function setData(BTN,DATA){
             TEXT_URL.parentNode.classList.remove("hide");
             let id = BTN[i].id;
             let newData = DATA.find(work => work.id == id);
+            TEXT_NAME.innerText = newData.name;
             TEXT_OVERVIEW.innerText = newData.overview;
             TEXT_BACKGROUND.innerText = newData.background;
             if(newData.url === false){
