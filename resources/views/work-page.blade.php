@@ -45,13 +45,26 @@
             </div>
         </article>
 
-        {{--ハンバーガーメニュー--}}
-        <div class="fixed right-4 top-2 flex items-center gap-2 md:hidden cursor-pointer" id="hamburger_icon">
-            <p class="a-btn">A</p>
-            <p>ひらく</p>
+{{--以下、モバイル用--}}
+
+        {{--haedボタン--}}
+        <div class="fixed right-2 top-2 flex gap-4">
+            {{--open-btn--}}
+            <div class="flex items-center gap-2 md:hidden cursor-pointer" id="hamburger_icon">
+                <p class="a-btn">A</p>
+                <p>ひらく</p>
+            </div>
+
+            {{--close-work-btn--}}
+            <div class="flex items-center gap-2 md:hidden cursor-pointer">
+                <a href="/" class="a-btn">B</a>
+                <a href="/">バトル</a>
+            </div>
         </div>
 
+        {{--サイドメニュー--}}
         <div class="side_menu_off border-4 border-solid border-work-border-r-container rounded-lg">
+            {{--close-side-menu-btn--}}
             <div class="absolute z-50 right-4 top-1 flex items-center gap-2 md:hidden cursor-pointer" id="close_icon">
                 <p class="a-btn">B</p>
                 <p>とじる</p>
