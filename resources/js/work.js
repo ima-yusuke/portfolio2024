@@ -75,6 +75,7 @@ function setData(BTN,DATA){
             removeChild();
             newData.language.forEach(language => {
                 let newLanguage = document.createElement("p");
+                newLanguage.classList.add("text-sm");
                 newLanguage.innerText = language;
                 CONTAINER_LANGUAGE.appendChild(newLanguage);
             });
