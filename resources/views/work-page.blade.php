@@ -1,7 +1,7 @@
 <x-template title="ポートフォリオ" css="app.css">
     <section class="flex w-full h-full bg-work-bg">
         {{--左側--}}
-        <article class="w-full md:w-1/2 flex flex-col">
+        <article class="w-full md:w-1/2 flex flex-col pt-6 md:pt-0">
             {{--画像--}}
             <div class="h-1/2 w-full flex items-center justify-center">
                 <img src="{{asset("storage/img/".$personalWorkData[0]["image"])}}" alt="work" class="w-[90%] h-[250px] md:w-[80%] md:h-[80%] object-cover rounded-lg" id="work_img">
@@ -46,9 +46,16 @@
         </article>
 
         {{--ハンバーガーメニュー--}}
-        <i id="hamburger_icon" class="md:hidden fa-solid fa-bars fixed right-4 top-2 text-2xl cursor-pointer"></i>
-        <i id="close_icon" class="hidden fa-solid fa-xmark fixed right-4 top-2 text-2xl cursor-pointer"></i>
-        <div class="side_menu_off border-4 border-solid border-work-border-r-container rounded-lg overflow-y-scroll">
+        <div class="fixed right-4 top-2 flex items-center gap-2 md:hidden cursor-pointer" id="hamburger_icon">
+            <p class="a-btn">A</p>
+            <p>ひらく</p>
+        </div>
+
+        <div class="side_menu_off border-4 border-solid border-work-border-r-container rounded-lg">
+            <div class="absolute z-50 right-4 top-1 flex items-center gap-2 md:hidden cursor-pointer" id="close_icon">
+                <p class="a-btn">B</p>
+                <p>とじる</p>
+            </div>
             <div class="w-full h-full bg-work-dark-yellow py-8 px-1 rounded-lg">
                 <x-work-menu-mobile :workdata="$personalWorkData" :flag="true" category="personal"/>
                 <x-work-menu-mobile :workdata="$businessWorkData" :flag="false" category="business"/>

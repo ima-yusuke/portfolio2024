@@ -22,12 +22,11 @@
 }
 
 #hamburger_icon{
-    z-index: 1000;
+    z-index: 10;
 }
 
 #close_icon{
-    position: fixed;
-    z-index: 1000;
+    z-index: 10;
 }
 
 /*サイドバー開いてるときにスクロールしないようにする*/

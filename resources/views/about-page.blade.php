@@ -133,7 +133,7 @@
                     <p class="switch-text cursor-pointer">きりかえ</p>
                 </div>
                 <div class="flex items-center gap-2">
-                    <a href="/" class="a-btn">A</a>
+                    <a href="/" class="a-btn">B</a>
                     <p><a href="/">やめる</a></p>
                 </div>
             </div>
