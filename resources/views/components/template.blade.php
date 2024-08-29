@@ -6,8 +6,8 @@
     @endif
     @vite(['resources/css/'.$css,'resources/css/about-1.css'])
 </x-head>
-<body class="h-full md:overflow-hidden">
-<main class="flex-1">
+<body class="h-full overflow-hidden">
+<main class="flex-1 h-full">
     {{ $slot }}
 </main>
 </body>
