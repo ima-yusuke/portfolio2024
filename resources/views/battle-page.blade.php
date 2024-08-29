@@ -1,5 +1,5 @@
 <x-template title="ポートフォリオ" css="app.css">
-    <div class="relative max-h-screen min-h-screen md:min-h-screen w-full bg-battle-bg overflow-hidden flex flex-col">
+    <div class="relative max-h-screen min-h-screen md:min-h-screen w-full bg-battle-bg overflow-hidden flex flex-col ">
         {{-- 敵ポケモン --}}
         <section class="flex flex-col gap-10 md:gap-0 flex-grow">
             {{-- ポケモン詳細 --}}
@@ -14,7 +14,7 @@
         </section>
 
         {{-- メニュー --}}
-        <section class="absolute bottom-0 w-full">
+        <section class="w-full">
             {{-- ポケモン詳細 --}}
             <article class="flex justify-end mr-1 md:mr-24 md:mb-4 z-30 relative">
                 <x-battle-pokemon-detail name="今井 祐輔" sex="♂" hp="60" level="27" flag="true"></x-battle-pokemon-detail>
