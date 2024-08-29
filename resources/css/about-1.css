@@ -9,6 +9,11 @@
     justify-content: center;
     align-items: center;
     position: relative;
+}@media (max-width: 768px) {
+    .cross-key-container {
+        width:60px;
+        height: 60px;
+    }
 }
 
 .cross-key-btn {
@@ -25,6 +30,12 @@
     justify-content: center;
     align-items: center;
     font-size: 12px;
+}@media (max-width: 768px) {
+    .cross-key-btn {
+        font-size: 8px;
+        width:20px;
+        height: 20px;
+    }
 }
 
 .top-mark, .bottom-mark, .left-mark, .right-mark {
@@ -90,6 +101,39 @@
     align-items: center;
     font-size: 8px;
 }
+
+.l-btn{
+    width:40px;
+    height: 28px;
+    background-color: white;
+    color: rgba(66, 86, 123, 0.8);
+    border: 2px solid rgba(0, 0, 0, 0.2);
+    border-top-left-radius: 70%;
+    box-shadow: inset -2px -2px 5px rgba(0, 0, 0, 0.6),
+    inset 2px 2px 5px rgba(255, 255, 255, 0.3),
+    2px 2px 5px rgba(0, 0, 0, 0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+}
+
+.r-btn{
+    width:40px;
+    height: 28px;
+    background-color: white;
+    color: rgba(66, 86, 123, 0.8);
+    border: 2px solid rgba(0, 0, 0, 0.2);
+    border-top-right-radius: 70%;
+    box-shadow: inset -2px -2px 5px rgba(0, 0, 0, 0.6),
+    inset 2px 2px 5px rgba(255, 255, 255, 0.3),
+    2px 2px 5px rgba(0, 0, 0, 0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+}
+
 
 
 span.under-line {

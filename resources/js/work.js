@@ -1,7 +1,6 @@
 // 左画面
 const TEXT_CURRENT_PAGE = document.getElementById("current_title");
-const RIGHT_ARROW = document.getElementById("right_arrow");
-const LEFT_ARROW = document.getElementById("left_arrow");
+const ARROWS = document.getElementsByClassName("arrow");
 
 // 右画面
 const CONTAINER_PERSONAL_MENU = document.getElementById("container_personal_menu")
@@ -19,25 +18,17 @@ let currentPageFlag = true;
 
 setData(BTN_PERSONAL_MENU,personalWorkData);
 
-RIGHT_ARROW.addEventListener("click",function () {
-    if(currentPageFlag){
-        setData(BTN_BUSINESS_MENU,businessWorkData);
-        SwitchView("会社開発",CONTAINER_PERSONAL_MENU,CONTAINER_BUSINESS_MENU,false,businessWorkData,MOBILE_PERSONAL_MENU,MOBILE_BUSINESS_MENU);
-    }else{
-        setData(BTN_PERSONAL_MENU,personalWorkData);
-        SwitchView("個人開発",CONTAINER_BUSINESS_MENU,CONTAINER_PERSONAL_MENU,true,personalWorkData,MOBILE_BUSINESS_MENU,MOBILE_PERSONAL_MENU);
-    }
-})
-
-LEFT_ARROW.addEventListener("click",function () {
-    if(currentPageFlag){
-        setData(BTN_BUSINESS_MENU,businessWorkData);
-        SwitchView("会社開発",CONTAINER_PERSONAL_MENU,CONTAINER_BUSINESS_MENU,false,businessWorkData,MOBILE_PERSONAL_MENU,MOBILE_BUSINESS_MENU);
-    }else{
-        setData(BTN_PERSONAL_MENU,personalWorkData);
-        SwitchView("個人開発",CONTAINER_BUSINESS_MENU,CONTAINER_PERSONAL_MENU,true,personalWorkData,MOBILE_BUSINESS_MENU,MOBILE_PERSONAL_MENU);
-    }
-})
+for (let i = 0; i < ARROWS.length; i++) {
+    ARROWS[i].addEventListener("click",function () {
+        if(currentPageFlag){
+            setData(BTN_BUSINESS_MENU,businessWorkData);
+            SwitchView("会社開発",CONTAINER_PERSONAL_MENU,CONTAINER_BUSINESS_MENU,false,businessWorkData,MOBILE_PERSONAL_MENU,MOBILE_BUSINESS_MENU);
+        }else{
+            setData(BTN_PERSONAL_MENU,personalWorkData);
+            SwitchView("個人開発",CONTAINER_BUSINESS_MENU,CONTAINER_PERSONAL_MENU,true,personalWorkData,MOBILE_BUSINESS_MENU,MOBILE_PERSONAL_MENU);
+        }
+    })
+}
 
 function SwitchView(Title,HideElement,ShowElement,Flag,DATA,MobileHideElement,MobileShowElement) {
     TEXT_CURRENT_PAGE.innerText = Title;

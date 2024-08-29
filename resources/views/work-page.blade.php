@@ -10,9 +10,9 @@
             <div class="h-1/2 w-full flex flex-col items-center gap-4 mb-4">
                 {{--タイトル--}}
                 <div class="flex justify-center md:justify-end items-center w-full">
-                    <p class="-rotate-180 text-3xl md:text-6xl text-red-500 -mr-6" id="left_arrow">▶</p>
+                    <p class="-rotate-180 text-3xl md:text-6xl text-red-500 -mr-6 arrow" id="left_arrow">▶</p>
                     <p class="w-[90%] md:w-[80%] md:text-4xl py-2 md:py-4 text-center bg-work-dark-yellow rounded-2xl md:tracking-[30px]" id="current_title">個人開発</p>
-                    <p class="text-3xl md:text-6xl text-red-500 -ml-6" id="right_arrow">▶</p>
+                    <p class="text-3xl md:text-6xl text-red-500 -ml-6 arrow" id="right_arrow">▶</p>
                 </div>
 
                 {{--説明文--}}
@@ -48,17 +48,24 @@
 {{--以下、モバイル用--}}
 
         {{--haedボタン--}}
-        <div class="fixed right-2 top-2 flex gap-4">
+        <div class="fixed top-2 flex justify-center w-full gap-4 md:hidden">
+            {{--切り替え-L-btn--}}
+            <div class="flex items-center gap-1">
+                <p class="l-btn arrow">L</p>
+                <p class="switch-text cursor-pointer text-sm">きりかえ</p>
+                <p class="r-btn arrow">R</p>
+            </div>
+
             {{--open-btn--}}
-            <div class="flex items-center gap-2 md:hidden cursor-pointer" id="hamburger_icon">
+            <div class="flex items-center gap-1 md:hidden cursor-pointer" id="hamburger_icon">
                 <p class="a-btn">A</p>
-                <p>ひらく</p>
+                <p class="text-sm">ひらく</p>
             </div>
 
             {{--close-work-btn--}}
-            <div class="flex items-center gap-2 md:hidden cursor-pointer">
+            <div class="flex items-center gap-1 md:hidden cursor-pointer">
                 <a href="/" class="a-btn">B</a>
-                <a href="/">バトル</a>
+                <a href="/" class="text-sm">バトル</a>
             </div>
         </div>
 
