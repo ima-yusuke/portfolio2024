@@ -66,7 +66,7 @@ class WorkController extends Controller
         ],
         [
             "id" => 2,
-            "name" => "LP（ランディングページ）①",
+            "name" => "LP①",
             "overview" => "LP。採用サイト。",
             "background" => "採用サイトを更新する予定のクライアント。新サイトが出来るまでのLPを作成。（現在のサイトを模写）。",
             "language" => ["Laravel"],

@@ -1,0 +1,36 @@
+/*サイドバー*/
+.side_menu_off{
+    background: rgba(253,195,89,.8);
+    width: 70%;
+    height: 100%;
+    position: fixed;
+    right: -90%;
+    top: 0;
+    transition-duration: 0.6s;
+    z-index: 30;
+}
+
+.side_menu_show{
+    background: rgba(253,195,89,.8);
+    width: 70%;
+    height: 100%;
+    position: fixed;
+    right: 0;
+    top: 0;
+    transition-duration: 0.6s;
+    z-index: 30;
+}
+
+#hamburger_icon{
+    z-index: 1000;
+}
+
+#close_icon{
+    position: fixed;
+    z-index: 1000;
+}
+
+/*サイドバー開いてるときにスクロールしないようにする*/
+.scroll_none{
+    overflow: hidden;
+}

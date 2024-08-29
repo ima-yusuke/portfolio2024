@@ -4,8 +4,10 @@ const RIGHT_ARROW = document.getElementById("right_arrow");
 const LEFT_ARROW = document.getElementById("left_arrow");
 
 // 右画面
-const CONTAINER_PERSONAL_MENU = document.getElementById("container_personal_menu");
+const CONTAINER_PERSONAL_MENU = document.getElementById("container_personal_menu")
 const CONTAINER_BUSINESS_MENU = document.getElementById("container_business_menu");
+const MOBILE_PERSONAL_MENU = document.getElementById("container_mobile_personal_menu");
+const MOBILE_BUSINESS_MENU = document.getElementById("container_mobile_business_menu");
 const CONTAINER_LANGUAGE = document.getElementById("container_language");
 const BTN_PERSONAL_MENU = document.getElementsByClassName("personal_btn");
 const BTN_BUSINESS_MENU = document.getElementsByClassName("business_btn");
@@ -20,10 +22,10 @@ setData(BTN_PERSONAL_MENU,personalWorkData);
 RIGHT_ARROW.addEventListener("click",function () {
     if(currentPageFlag){
         setData(BTN_BUSINESS_MENU,businessWorkData);
-        SwitchView("会社開発",CONTAINER_PERSONAL_MENU,CONTAINER_BUSINESS_MENU,false,businessWorkData);
+        SwitchView("会社開発",CONTAINER_PERSONAL_MENU,CONTAINER_BUSINESS_MENU,false,businessWorkData,MOBILE_PERSONAL_MENU,MOBILE_BUSINESS_MENU);
     }else{
         setData(BTN_PERSONAL_MENU,personalWorkData);
-        SwitchView("個人開発",CONTAINER_BUSINESS_MENU,CONTAINER_PERSONAL_MENU,true,personalWorkData);
+        SwitchView("個人開発",CONTAINER_BUSINESS_MENU,CONTAINER_PERSONAL_MENU,true,personalWorkData,MOBILE_BUSINESS_MENU,MOBILE_PERSONAL_MENU);
     }
 })
 
@@ -37,10 +39,12 @@ LEFT_ARROW.addEventListener("click",function () {
     }
 })
 
-function SwitchView(Title,HideElement,ShowElement,Flag,DATA) {
+function SwitchView(Title,HideElement,ShowElement,Flag,DATA,MobileHideElement,MobileShowElement) {
     TEXT_CURRENT_PAGE.innerText = Title;
     HideElement.classList.add("hide");
     ShowElement.classList.remove("hide");
+    MobileHideElement.classList.add("hide");
+    MobileShowElement.classList.remove("hide");
     currentPageFlag = Flag;
     TEXT_OVERVIEW.innerText = DATA[0].overview;
     TEXT_BACKGROUND.innerText = DATA[0].background;
