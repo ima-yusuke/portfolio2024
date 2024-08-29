@@ -1,9 +1,9 @@
 <x-template title="ポートフォリオ" css="app.css">
     <div class="relative max-h-screen min-h-screen md:min-h-screen w-full bg-battle-bg flex flex-col ">
         {{-- 敵ポケモン --}}
-        <section class="flex flex-col gap-10 md:gap-0 flex-grow">
+        <section class="flex flex-col gap-8 md:gap-0 flex-grow">
             {{-- ポケモン詳細 --}}
-            <article class="pt-8 pl-6 md:pl-32">
+            <article class="pt-2 md:pt-8 pl-6 md:pl-32">
                 <x-battle-pokemon-detail name="ヌオー" sex="♀" hp="80" level="100" flag="false"></x-battle-pokemon-detail>
             </article>
 
@@ -13,6 +13,11 @@
             </article>
         </section>
 
+        {{-- ポケモンイラスト --}}
+        <article class="md:hidden flex justify-start z-10 mb-[-50px]">
+            <x-battle-field src="storage/img/pokemon02.png"></x-battle-field>
+        </article>
+
         {{-- メニュー --}}
         <section class="w-full">
             {{-- ポケモン詳細 --}}
@@ -21,8 +26,8 @@
             </article>
 
             <div class="flex h-[100px] md:h-[200px] w-full relative">
-                {{-- ポケモンイラスト --}}
-                <article class="flex justify-start md:pl-10 absolute -top-[200%] md:-top-[60%] z-10">
+                {{-- ポケモンイラスト（PC） --}}
+                <article class="hidden md:flex justify-start md:pl-10 absolute -top-[200%] md:-top-[60%] z-10">
                     <x-battle-field src="storage/img/pokemon02.png"></x-battle-field>
                 </article>
 
