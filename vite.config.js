@@ -9,7 +9,8 @@ export default defineConfig({
                 'resources/css/about-1.css',
                 'resources/js/app.js',
                 'resources/js/about.js',
-                'resources/js/work.js'
+                'resources/js/work.js',
+                'resources/js/side-menu.js'
             ],
             refresh: true,
         }),
@@ -26,6 +27,8 @@ export default defineConfig({
                 app: 'resources/js/app.js',
                 appStyles: 'resources/css/app.css',
                 about1: 'resources/css/about-1.css',
+                side: 'resources/css/side-menu.css',
+                sideMenu: 'resources/js/side-menu.js',
                 about: 'resources/js/about.js',
                 work: 'resources/js/work.js'
             }
