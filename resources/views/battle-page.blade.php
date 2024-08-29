@@ -1,5 +1,5 @@
 <x-template title="ポートフォリオ" css="app.css">
-    <div class="relative max-h-screen min-h-screen md:min-h-screen w-full bg-battle-bg overflow-hidden flex flex-col ">
+    <div class="relative max-h-screen min-h-screen md:min-h-screen w-full bg-battle-bg flex flex-col ">
         {{-- 敵ポケモン --}}
         <section class="flex flex-col gap-10 md:gap-0 flex-grow">
             {{-- ポケモン詳細 --}}
