@@ -46,10 +46,10 @@
         </article>
 
         {{--ハンバーガーメニュー--}}
-        <i id="hamburger_icon" class="md:hidden fa-solid fa-bars fixed right-4 md:right-6 top-2 md:top-6 text-2xl md:text-4xl cursor-pointer"></i>
-        <i id="close_icon" class="hidden fa-solid fa-xmark fixed right-4 md:right-6 top-2 md:top-6 text-2xl md:text-4xl cursor-pointer"></i>
-        <div class="side_menu_off border-4 border-solid border-work-border-r-container rounded-lg">
-            <div class="w-full h-full bg-work-dark-yellow py-8 md:py-12 px-1 md:px-2 rounded-lg">
+        <i id="hamburger_icon" class="md:hidden fa-solid fa-bars fixed right-4 top-2 text-2xl cursor-pointer"></i>
+        <i id="close_icon" class="hidden fa-solid fa-xmark fixed right-4 top-2 text-2xl cursor-pointer"></i>
+        <div class="side_menu_off border-4 border-solid border-work-border-r-container rounded-lg overflow-y-scroll">
+            <div class="w-full h-full bg-work-dark-yellow py-8 px-1 rounded-lg">
                 <x-work-menu-mobile :workdata="$personalWorkData" :flag="true" category="personal"/>
                 <x-work-menu-mobile :workdata="$businessWorkData" :flag="false" category="business"/>
             </div>

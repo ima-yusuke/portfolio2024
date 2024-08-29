@@ -9,4 +9,3 @@
         <a href="/" class="hoverable hover:cursor-pointer">バッグをとじる</a>
     </div>
 </div>
-</div>
