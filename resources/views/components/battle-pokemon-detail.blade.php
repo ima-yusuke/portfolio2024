@@ -1,15 +1,14 @@
 <div class="flex flex-col w-full @if($flag==="true") items-end @endif">
     <div class="flex flex-col gap-2 border-2 border-solid border-black bg-white w-[55%] md:w-[30%] rounded-lg">
         {{--上部--}}
-        <div class="flex items-end justify-between md:gap-20 pt-2 px-2">
-            <aside class="flex items-center">
+        <div class="flex items-center justify-between md:gap-20 pt-2 px-2">
+            <aside class="flex items-center gap-1">
                 <p class="md:text-3xl pl-1 md:pl-4">{{$name}}</p>
                 @if($sex=="♂")
-                    <p class="pl-2 text-blue-400">{{$sex}}</p>
+                    <p class="text-blue-400 md:text-3xl">{{$sex}}</p>
                 @else
-                    <p class="pl-2 text-pink-400">{{$sex}}</p>
+                    <p class="text-pink-400 md:text-3xl">{{$sex}}</p>
                 @endif
-
             </aside>
             <p class="md:text-3xl">Lv:{{$level}}</p>
         </div>
