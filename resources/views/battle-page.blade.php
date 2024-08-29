@@ -1,27 +1,27 @@
 <x-template title="ポートフォリオ" css="app.css">
-    <div class="relative max-h-screen min-h-screen md:min-h-screen w-full bg-battle-bg">
-        {{--敵ポケモン--}}
-        <section class="flex flex-col gap-10 md:gap-0">
-            {{--ポケモン詳細--}}
+    <div class="relative max-h-screen min-h-screen md:min-h-screen w-full bg-battle-bg overflow-hidden flex flex-col">
+        {{-- 敵ポケモン --}}
+        <section class="flex flex-col gap-10 md:gap-0 flex-grow">
+            {{-- ポケモン詳細 --}}
             <article class="pt-8 pl-6 md:pl-32">
                 <x-battle-pokemon-detail name="ヌオー" sex="♀" hp="80" level="100" flag="false"></x-battle-pokemon-detail>
             </article>
 
-            {{--ポケモンイラスト--}}
+            {{-- ポケモンイラスト --}}
             <article class="flex justify-end mr-2 md:mr-10">
                 <x-battle-field src="storage/img/pokemon01.png"></x-battle-field>
             </article>
         </section>
 
-        {{--メニュー--}}
+        {{-- メニュー --}}
         <section class="absolute bottom-0 w-full">
-            {{--ポケモン詳細--}}
+            {{-- ポケモン詳細 --}}
             <article class="flex justify-end mr-1 md:mr-24 md:mb-4 z-30 relative">
                 <x-battle-pokemon-detail name="今井 祐輔" sex="♂" hp="60" level="27" flag="true"></x-battle-pokemon-detail>
             </article>
 
             <div class="flex h-[100px] md:h-[200px] w-full relative">
-                {{--ポケモンイラスト--}}
+                {{-- ポケモンイラスト --}}
                 <article class="flex justify-start md:pl-10 absolute -top-[200%] md:-top-[60%] z-10">
                     <x-battle-field src="storage/img/pokemon02.png"></x-battle-field>
                 </article>
@@ -45,7 +45,5 @@
                 </article>
             </div>
         </section>
-
-
     </div>
 </x-template>
