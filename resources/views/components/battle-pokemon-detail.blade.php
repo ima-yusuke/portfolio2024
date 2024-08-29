@@ -4,9 +4,9 @@
         <div class="flex items-end justify-between md:gap-20 pt-2 px-2">
             <p class="md:text-3xl pl-1 md:pl-4">{{$name}}
                 @if($sex=="♂")
-                    <span class="pl-2 text-blue-400">{{$sex}}</span>
+                    <span class="pl-2 text-blue-400 align-middle">{{$sex}}</span>
                 @else
-                    <span class="pl-2 text-pink-400">{{$sex}}</span>
+                    <span class="pl-2 text-pink-400 align-middle">{{$sex}}</span>
                 @endif
             </p>
             <p class="md:text-3xl">Lv:{{$level}}</p>
