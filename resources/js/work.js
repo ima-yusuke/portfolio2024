@@ -52,6 +52,7 @@ function SwitchView(Title,HideElement,ShowElement,Flag,DATA,MobileHideElement,Mo
     removeChild();
     DATA[0].language.forEach(language => {
         let newLanguage = document.createElement("p");
+        newLanguage.classList.add("text-sm");
         newLanguage.innerText = language;
         CONTAINER_LANGUAGE.appendChild(newLanguage);
     });
