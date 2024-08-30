@@ -7,6 +7,8 @@ export default defineConfig({
             input: [
                 'resources/css/app.css',
                 'resources/css/about-1.css',
+                'resources/css/start.css',
+                'resources/css/side-menu.css',
                 'resources/js/app.js',
                 'resources/js/about.js',
                 'resources/js/work.js',
@@ -27,6 +29,7 @@ export default defineConfig({
                 app: 'resources/js/app.js',
                 appStyles: 'resources/css/app.css',
                 about1: 'resources/css/about-1.css',
+                start: 'resources/css/start.css',
                 side: 'resources/css/side-menu.css',
                 sideMenu: 'resources/js/side-menu.js',
                 about: 'resources/js/about.js',

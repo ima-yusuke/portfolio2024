@@ -4,6 +4,10 @@ use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\WorkController;
 
+Route::get('/start', function () {
+    return view('start-page');
+});
+
 Route::get('/', function () {
     return view('battle-page');
 });
