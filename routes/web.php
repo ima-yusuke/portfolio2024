@@ -4,11 +4,11 @@ use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\WorkController;
 
-Route::get('/start', function () {
+Route::get('/', function () {
     return view('start-page');
 });
 
-Route::get('/', function () {
+Route::get('/battle', function () {
     return view('battle-page');
 });
 

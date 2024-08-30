@@ -133,8 +133,8 @@
                     <p class="switch-text cursor-pointer text-sm md:text-5xl">きりかえ</p>
                 </div>
                 <div class="flex flex-col md:flex-row justify-between items-center gap-1 md:gap-2">
-                    <p><a href="/" class="a-btn">B</a></p>
-                    <p><a href="/" class="text-sm md:text-5xl">バトル</a></p>
+                    <p><a href="/battle" class="a-btn">B</a></p>
+                    <p><a href="/battle" class="text-sm md:text-5xl">バトル</a></p>
                 </div>
             </div>
         </section>

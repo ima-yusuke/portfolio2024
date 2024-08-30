@@ -44,7 +44,7 @@
                         </aside>
                         <aside class="flex justify-center gap-4 md:gap-20 md:text-4xl pl-2 md:pl-0">
                             <a href="/about" class="hoverable hover:cursor-pointer">ポケモン</a>
-                            <p class="hoverable hover:cursor-pointer">にげる</p>
+                            <a href="/" class="hoverable hover:cursor-pointer">にげる</a>
                         </aside>
                     </div>
                 </article>

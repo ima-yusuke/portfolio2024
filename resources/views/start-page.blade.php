@@ -21,13 +21,12 @@
             </aside>
         </div>
 
-
         {{--ゲームスクリーン--}}
         <div class="w-1/2 border-solid border-gray-800 game-screen-border rounded-lg" style="border-width: 25px">
             <article class="w-full bg-work-bg flex flex-col items-center justify-center gap-6 py-16">
-                <x-start-menu title="さいしょから はじめる" />
-                <x-start-menu title="このサイト について" />
-                <x-start-menu title="コンタクト じょうほう"/>
+                <x-start-menu title="さいしょから はじめる" :flag="true"/>
+                <x-start-menu title="このサイト について" :flag="false"/>
+                <x-start-menu title="コンタクト じょうほう" :flag="false"/>
             </article>
             <p class="text-white bg-gray-800 w-full text-center pt-6 text-2xl">YUSUKE IMAI PORTFOLIO</p>
         </div>

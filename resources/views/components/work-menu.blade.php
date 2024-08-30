@@ -6,6 +6,6 @@
         </div>
     @endforeach
     <div class="md:text-4xl">
-        <a href="/" class="hoverable hover:cursor-pointer">バッグをとじる</a>
+        <a href="/battle" class="hoverable hover:cursor-pointer">バッグをとじる</a>
     </div>
 </div>
