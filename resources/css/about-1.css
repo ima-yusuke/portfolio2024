@@ -160,7 +160,8 @@ span.under-line {
 }
 
 #toeic_modal,
-#knt_modal{
+#knt_modal,
+#tamwood_modal{
     background-color: rgba(0, 0, 0, 0.8); /* 背景を黒で透過させる */
     opacity: 0;
     transition: opacity 0.3s ease-in-out;
@@ -185,6 +186,14 @@ th, td {
     border: 1px solid #000; /* セルのボーダー */
     padding: 10px 15px; /* パディングを調整 */
     text-align: left; /* テキストの左揃え */
+}@media (max-width: 768px) {
+    th, td {
+        padding: 5px 8px; /* パディングを調整 */
+    }
+}
+
+table thead th{
+    text-align: center;
 }
 
 /* 各セルの横幅を広く取る */

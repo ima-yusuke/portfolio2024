@@ -52,11 +52,11 @@ for (let i = 0; i < SWITCH_TEXTS.length; i++) {
 OpenModal(TOEIC_MODAL,OPEN_TOEIC_MODAL);
 CloseModal(TOEIC_MODAL,CLOSE_TOEIC_MODAL);
 
-OpenModal(KNT_MODAL,OPEN_KNT_MODAL);
-CloseModal(KNT_MODAL,CLOSE_KNT_MODAL);
-
 OpenModal(TAMWOOD_MODAL,OPEN_TAMWOOD_MODAL);
 CloseModal(TAMWOOD_MODAL,CLOSE_TAMWOOD_MODAL);
+
+OpenModal(KNT_MODAL,OPEN_KNT_MODAL);
+CloseModal(KNT_MODAL,CLOSE_KNT_MODAL);
 
 function OpenModal(MODAL,BTN){
     BTN.addEventListener('click', () => {

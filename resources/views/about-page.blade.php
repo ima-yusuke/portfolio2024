@@ -1,10 +1,10 @@
 <x-template title="ポートフォリオ" css="app.css">
     {{--TOEICモダルopen時の背景黒幕--}}
-    <div class="hide fixed min-h-screen w-full flex flex-col justify-center items-center bg-black -z-10" id="toeic_modal">
+    <div class="hide fixed min-h-screen w-full flex flex-col justify-center items-center -z-10" id="toeic_modal">
         {{--モダルコンテナ--}}
-        <div class="w-[80%] flex flex-col items-center justify-center relative rounded-md">
+        <div class="w-[90%] md:w-[80%] flex flex-col items-center justify-center relative rounded-md">
             <button class="absolute -top-4 -right-4 text-2xl w-[50px] h-[50px] bg-red-500 text-white rounded-full" id="close_toeic_modal">X</button>
-            <img src="{{asset('storage/img/toeic.jpeg')}}" class="w-full h-[400px] object-cover">
+            <img src="{{asset('storage/img/toeic.jpeg')}}" class="w-full h-[150px] md:h-[400px] object-cover">
             <aside class="bg-ability-value-bg w-full flex flex-col items-center justify-center relative max-h-[350px]">
                 {{--スクロールヒント--}}
                 <div id="scroll_indicator" class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-black opacity-50 w-[200px] h-[100px] flex justify-center items-center rounded-lg">
@@ -104,25 +104,25 @@
             </aside>
         </div>
     </div>
-
-    {{--KNTモダル--}}
-    <x-ability-modal name="knt" src="storage/img/knt.jpeg"></x-ability-modal>
     {{--Tamwoodモダル--}}
     <x-ability-modal name="tamwood" src="storage/img/tamwood.jpeg"></x-ability-modal>
+    {{--KNTモダル--}}
+    <x-ability-modal name="knt" src="storage/img/knt.jpeg"></x-ability-modal>
+
 
     <div class="min-h-screen flex flex-col">
         {{--head（じょうほう）--}}
-        <section class="flex items-center text-white text-5xl h-[100px]" id="head_info">
+        <section class="flex items-center text-white text-sm md:text-5xl h-[100px]" id="head_info">
             <div class="bg-about-title-bg-light-blue h-full flex items-center">
-                <h1 class="bg-about-title-bg-brown h-full flex items-center px-8 rounded-r-full pr-8 border-r-4 border-solid border-about-title-dot">
+                <h1 class="bg-about-title-bg-brown h-full flex items-center px-2 md:px-8 rounded-r-full md:pr-8 border-r-4 border-solid border-about-title-dot">
                     ポケモンじょうほう●
                 </h1>
             </div>
             <div class="bg-about-title-bg-command h-full">
-                <p class="text-about-title-dot bg-about-title-bg-light-blue h-full px-16 rounded-r-full flex items-center">●</p>
+                <p class="text-about-title-dot bg-about-title-bg-light-blue h-full px-4 md:px-16 rounded-r-full flex items-center">●</p>
             </div>
-            <div class="bg-about-title-bg-command py-4 flex-1 flex justify-center gap-14 max-h-[100px]">
-                <div class="flex items-center gap-2">
+            <div class="bg-about-title-bg-command py-4 flex-1 flex justify-center items-center gap-4 md:gap-14 h-full max-h-[100px]">
+                <div class="flex flex-col md:flex-row justify-end items-center gap-1 md:gap-2">
                     <div class="cross-key-container relative">
                         <div class="btn cross-key-btn top-mark"></div>
                         <div class="btn cross-key-btn left-mark"></div>
@@ -130,27 +130,27 @@
                         <button class="btn cross-key-btn right-mark" id="right_btn">▲</button>
                         <div class="btn cross-key-btn bottom-mark"></div>
                     </div>
-                    <p class="switch-text cursor-pointer">きりかえ</p>
+                    <p class="switch-text cursor-pointer text-sm md:text-5xl">きりかえ</p>
                 </div>
-                <div class="flex items-center gap-2">
-                    <a href="/" class="a-btn">B</a>
-                    <p><a href="/">やめる</a></p>
+                <div class="flex flex-col md:flex-row justify-between items-center gap-1 md:gap-2">
+                    <p><a href="/" class="a-btn">B</a></p>
+                    <p><a href="/" class="text-sm md:text-5xl">バトル</a></p>
                 </div>
             </div>
         </section>
 
         {{--head（のうりょく）--}}
-        <section class="flex items-center text-white text-5xl h-[100px] hide" id="head_ability">
+        <section class="flex items-center text-white text-sm md:text-5xl h-[100px] hide" id="head_ability">
             <div class="bg-about-title-bg-light-blue h-full flex items-center">
-                <h1 class="bg-about-title-bg-brown h-full flex items-center px-16 rounded-r-full border-r-4 border-solid border-about-title-dot">
+                <h1 class="bg-about-title-bg-brown h-full flex items-center px-4 md:px-16 rounded-r-full border-r-4 border-solid border-about-title-dot">
                     ●
                 </h1>
             </div>
             <div class="bg-about-title-bg-command h-full">
-                <p class="text-about-title-dot bg-about-title-bg-light-blue h-full px-8 rounded-r-full flex items-center">ポケモンのうりょく●</p>
+                <p class="text-about-title-dot bg-about-title-bg-light-blue h-full px-2 md:px-8 rounded-r-full flex items-center">ポケモンのうりょく●</p>
             </div>
-            <div class="bg-about-title-bg-command py-4 flex-1 flex justify-center gap-14 max-h-[100px]">
-                <div class="flex items-center gap-2">
+            <div class="bg-about-title-bg-command py-4 flex-1 flex justify-center items-center gap-4 md:gap-14 h-full max-h-[100px]">
+                <div class="flex flex-col md:flex-row justify-end items-center gap-1 md:gap-2">
                     <div class="cross-key-container relative">
                         <div class="btn cross-key-btn top-mark"></div>
                         <button class="btn cross-key-btn left-mark" id="left_btn">▲</button>
@@ -158,43 +158,43 @@
                         <div class="btn cross-key-btn right-mark"></div>
                         <div class="btn cross-key-btn bottom-mark"></div>
                     </div>
-                    <p class="switch-text cursor-pointer">きりかえ</p>
+                    <p class="switch-text cursor-pointer text-sm md:text-5xl">きりかえ</p>
                 </div>
-                <div class="flex items-center gap-2">
-                    <a href="/" class="a-btn">A</a>
-                    <p><a href="/">やめる</a></p>
+                <div class="flex flex-col md:flex-row justify-between items-center gap-1 md:gap-2">
+                    <p><a href="/" class="a-btn">B</a></p>
+                    <p><a href="/" class="text-sm md:text-5xl">バトル</a></p>
                 </div>
             </div>
         </section>
 
         {{--main--}}
-        <section class="border-solid border-about-border w-full flex-1 bg-info-bg flex flex-col gap-6" style="border-width: 8px;" id="about_main">
+        <section class="border-solid border-about-border w-full flex-1 pb-4 md:pb-0 bg-info-bg flex flex-col gap-6" style="border-width: 8px;" id="about_main">
             {{--top--}}
-            <article class="w-full flex">
+            <article class="w-full flex flex-col md:flex-row">
                 {{--left--}}
-                <div class="w-[50%] border-solid border-about-border h-full" style=" border-right-width: 8px;border-bottom-width: 8px;">
+                <div class="w-full md:w-[50%] border-solid border-about-border h-full" style=" border-right-width: 8px;border-bottom-width: 8px;">
                     <div class="bg-info-img-bg py-4" id="img_container">
-                        <aside class="flex justify-between text-white px-4 pb-2">
-                            <p class="text-5xl">Lv27</p>
-                            <p class="text-5xl">今井 祐輔 ♂</p>
+                        <aside class="flex justify-between text-white px-8 md:px-4 pb-2">
+                            <p class="text-2xl md:text-5xl">Lv27</p>
+                            <p class="text-2xl md:text-5xl">今井 祐輔 <span class="text-blue-500">♂</span></p>
                         </aside>
                         <div class="bg-white mx-4 flex justify-center items-center rounded-md">
-                            <img src="{{asset("storage/img/pokemon02.png")}}" class="w-[80%] h-[400px] object-cover">
+                            <img src="{{asset("storage/img/pokemon02.png")}}" class="w-[80%] h-[200px] md:w-[80%] md:h-[400px] object-cover">
                         </div>
                     </div>
                 </div>
 
                 {{--right（じょうほう）--}}
-                <div class="ml-4 h-full w-[50%] flex flex-col gap-6 my-4" id="info_right_container">
+                <div class="ml-4 h-full w-full md:w-[50%] flex flex-col gap-6 my-4" id="info_right_container">
                     <x-info-detail key="なまえ" value="今井 祐輔 （いまい ゆうすけ）"></x-info-detail>
                     <x-info-detail key="生年月日" value="1996.11.25"></x-info-detail>
                     <x-info-detail key="生息地" value="三重県"></x-info-detail>
-                    <div class="flex items-center">
-                        <div class="bg-info-key-bg relative rounded-full w-[230px] h-[40px] flex items-center justify-center z-20">
-                            <p class="text-white text-2xl absolute">目撃情報</p>
+                    <div class="flex flex-col md:flex-row items-start md:items-center">
+                        <div class="bg-info-key-bg relative rounded-full w-[150px] md:w-[230px] h-[30px] md:h-[40px] flex items-center justify-center z-20">
+                            <p class="text-white md:text-2xl absolute">目撃情報</p>
                         </div>
 
-                        <div class="bg-white py-4 px-6 rounded-lg ml-[-20px] z-10 flex-1 mr-[30px]">
+                        <div class="bg-white w-[90%] py-4 px-6 rounded-lg mt-[-0.5em] ml-[0.5em] md:mt-0 md:ml-[-20px] z-10 flex-1 mr-[30px]">
                             <p class="text-3xl">🇯🇵🇺🇸🇨🇦🇬🇧🇫🇷🇩🇪🇳🇱🇧🇪🇹🇭🇹🇼🇻🇳🇬🇺</p>
                         </div>
                     </div>
@@ -202,7 +202,7 @@
                 </div>
 
                 {{--right（のうりょく）--}}
-                <div class="ml-4 h-full w-[50%] flex flex-col gap-6 my-4 hide" id="ability_right_container">
+                <div class="md:ml-4 h-full w-full md:w-[50%] flex flex-col gap-6 my-4 hide" id="ability_right_container">
                     <x-ability-language-container key="マークアップ言語">
                         <x-ability-language src="storage/img/language-html.png" language="HTML"></x-ability-language>
                         <x-ability-language src="storage/img/language-css.png" language="CSS"></x-ability-language>
@@ -222,7 +222,7 @@
                         <x-ability-language src="storage/img/language-angularjs.png" language="AngularJS"></x-ability-language>
                     </x-ability-language-container>
                     <x-ability-language-container key="ツール">
-                        <x-ability-language src="storage/img/language-github.svg" language="Git,GitHub"></x-ability-language>
+                        <x-ability-language src="storage/img/language-github.svg" language="Git"></x-ability-language>
                         <x-ability-language src="storage/img/language-tailwindcss.svg" language="Tailwind CSS"></x-ability-language>
                         <x-ability-language src="storage/img/language-bootstrap.svg" language="Bootstrap"></x-ability-language>
                         <x-ability-language src="storage/img/language-docker.png" language="Docker"></x-ability-language>
@@ -235,11 +235,11 @@
             <article class="flex justify-center" id="info_bottom_container">
                 <div class="w-[90%] bg-white rounded-lg relative">
                     <div class="absolute -top-[5%] -left-[2%]">
-                        <div class="bg-info-key-bg relative rounded-full w-[450px] h-[40px] flex items-center justify-center z-20">
-                            <p class="text-white text-2xl absolute">トレーナーメモ</p>
+                        <div class="bg-info-key-bg relative rounded-full w-[200px] md:w-[450px] h-[30px] md:h-[40px] flex items-center justify-center z-20">
+                            <p class="text-white md:text-2xl absolute">トレーナーメモ</p>
                         </div>
                     </div>
-                    <p class="text-2xl pt-10 px-6 leading-loose" id="trainer_memo">
+                    <p class="text-base md:text-2xl pt-6 md:pt-10 px-6 leading-[2.5] md:leading-loose" id="trainer_memo">
                         <span class="under-line">
                             プログラミングと英語学習が大好き。基本的に英語で話しかけても問題ない。放っておくとバックパッカーで一人どこかに旅に出ていく。エサはマックのフライドポテトを与えると喜ぶ。
                             世界一周に憧れており、webサイト制作を通してその夢を叶えてくれるトレーナーを探している。まだまだ進化の可能性も秘めているポケモンである。
@@ -250,13 +250,13 @@
 
             {{--bottom（のうりょく）--}}
             <article class="flex justify-center hide" id="ability_bottom_container">
-                <div class="w-[90%] bg-ability-value-bg rounded-lg relative">
-                    <div class="absolute -top-[10%] -left-[2%]">
-                        <div class="bg-ability-key-bg relative rounded-full w-[450px] h-[40px] flex items-center justify-center z-20">
-                            <p class="text-white text-2xl absolute">けいけんち</p>
+                <div class="w-[95%] md:w-[90%] bg-ability-value-bg rounded-lg relative">
+                    <div class="absolute -top-[5%] md:-top-[10%] -left-[2%]">
+                        <div class="bg-ability-key-bg relative rounded-full w-[200px] md:w-[450px] h-[30px] md:h-[40px] flex items-center justify-center z-20">
+                            <p class="text-white md:text-2xl absolute">けいけんち</p>
                         </div>
                     </div>
-                    <p class="text-xl pt-6 px-6 leading-loose" id="trainer_memo">
+                    <p class="md:text-xl pt-6 pb-4 mn:pb-0 px-2 md:px-6 leading-loose" id="trainer_memo">
                         <span class="under-line">
                             ■語学：<span class="text-blue-500 hover:cursor-pointer" id="open_toeic_modal">TOEIC 870点</span>（2024.5）、<a href="https://www.queensu.ca/" target="_blank" class="text-blue-500">Queen's University</a>（語学学校卒業）、
                             <a href="https://tamwood.com/" target="_blank" class="text-blue-500">Tamwood Language School</a>（語学学校卒業）<br>
@@ -272,3 +272,4 @@
 
     @vite('resources/js/about.js')
 </x-template>
+
