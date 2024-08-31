@@ -49,7 +49,7 @@
         </div>
     </div>
 {{--スマホ用--}}
-    <div class="md:hidden w-full min-h-screen flex flex-col justify-center items-center bg-gray-300">
+    <div class="md:hidden overflow-hidden w-full min-h-screen flex flex-col justify-center items-center bg-gray-300">
         <section class="w-[90%] h-[95dvh] bg-work-command-bg shadow-xl rounded-lg overflow-hidden">
             {{--ゲームスクリーン--}}
             <div class="h-[45%] w-[90%] border-solid border-gray-800 game-screen-border rounded-lg m-4 flex flex-col" style="border-width: 15px">
