@@ -18,6 +18,10 @@ export default {
             fontFamily: {
                 sans: ['Figtree', ...defaultTheme.fontFamily.sans],
             },
+            screens: {
+                '2xl': '1536px',
+                '3xl': '1920px',
+            },
             colors: {
                 "battle-bg":"rgb(208,240,208)",
                 "battle-field-bg":"rgb(153,225,152)",

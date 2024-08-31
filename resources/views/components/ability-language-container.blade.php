@@ -1,5 +1,5 @@
 <div class="flex flex-col md:flex-row items-center md:items-center md:justify-between w-full md:px-4">
-    <div class="w-full md:w-[250px] flex justify-start ml-2 md:ml-0">
+    <div class="w-full md:w-[15rem] flex justify-start ml-2 md:ml-0">
         <div class="bg-ability-key-bg rounded-full w-[200px] md:w-full h-[30px] md:h-[40px] flex items-center justify-center text-white md:text-2xl z-20">
             {{$key}}
         </div>

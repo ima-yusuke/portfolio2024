@@ -4,8 +4,8 @@
         {{--モダルコンテナ--}}
         <div class="w-[90%] md:w-[80%] flex flex-col items-center justify-center relative rounded-md">
             <button class="absolute -top-4 -right-4 text-2xl w-[50px] h-[50px] bg-red-500 text-white rounded-full" id="close_toeic_modal">X</button>
-            <img src="{{asset('storage/img/toeic.jpeg')}}" class="w-full h-[150px] md:h-[400px] object-cover">
-            <aside class="bg-ability-value-bg w-full flex flex-col items-center justify-center relative max-h-[350px]">
+            <img src="{{asset('storage/img/toeic.jpeg')}}" class="w-full h-[150px] md:h-[45dvh] object-cover">
+            <aside class="bg-ability-value-bg w-full flex flex-col items-center justify-center relative max-h-[60dvh] md:max-h-[40dvh]">
                 {{--スクロールヒント--}}
                 <div id="scroll_indicator" class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-black opacity-50 w-[200px] h-[100px] flex justify-center items-center rounded-lg">
                     <p class="text-white text-center text-2xl">スクロール↓</p>
@@ -112,7 +112,7 @@
 
     <div class="min-h-screen flex flex-col">
         {{--head（じょうほう）--}}
-        <section class="flex items-center text-white text-sm md:text-5xl h-[100px]" id="head_info">
+        <section class="flex items-center text-white text-sm md:text-4xl h-[12dvh]" id="head_info">
             <div class="bg-about-title-bg-light-blue h-full flex items-center">
                 <h1 class="bg-about-title-bg-brown h-full flex items-center px-2 md:px-8 rounded-r-full md:pr-8 border-r-4 border-solid border-about-title-dot">
                     ポケモンじょうほう●
@@ -121,7 +121,7 @@
             <div class="bg-about-title-bg-command h-full">
                 <p class="text-about-title-dot bg-about-title-bg-light-blue h-full px-4 md:px-16 rounded-r-full flex items-center">●</p>
             </div>
-            <div class="bg-about-title-bg-command py-4 flex-1 flex justify-center items-center gap-4 md:gap-14 h-full max-h-[100px]">
+            <div class="bg-about-title-bg-command py-4 flex-1 flex justify-center items-center gap-4 md:gap-14 h-full">
                 <div class="flex flex-col md:flex-row justify-end items-center gap-1 md:gap-2">
                     <div class="cross-key-container relative">
                         <div class="btn cross-key-btn top-mark"></div>
@@ -130,17 +130,17 @@
                         <button class="btn cross-key-btn right-mark" id="right_btn">▲</button>
                         <div class="btn cross-key-btn bottom-mark"></div>
                     </div>
-                    <p class="switch-text cursor-pointer text-sm md:text-5xl">きりかえ</p>
+                    <p class="switch-text cursor-pointer text-[12px] md:text-4xl">きりかえ</p>
                 </div>
                 <div class="flex flex-col md:flex-row justify-between items-center gap-1 md:gap-2">
                     <p><a href="/battle" class="a-btn">B</a></p>
-                    <p><a href="/battle" class="text-sm md:text-5xl">バトル</a></p>
+                    <p><a href="/battle" class="text-[12px] md:text-4xl">バトル</a></p>
                 </div>
             </div>
         </section>
 
         {{--head（のうりょく）--}}
-        <section class="flex items-center text-white text-sm md:text-5xl h-[100px] hide" id="head_ability">
+        <section class="flex items-center text-white text-sm md:text-4xl h-[12dvh] hide" id="head_ability">
             <div class="bg-about-title-bg-light-blue h-full flex items-center">
                 <h1 class="bg-about-title-bg-brown h-full flex items-center px-4 md:px-16 rounded-r-full border-r-4 border-solid border-about-title-dot">
                     ●
@@ -149,7 +149,7 @@
             <div class="bg-about-title-bg-command h-full">
                 <p class="text-about-title-dot bg-about-title-bg-light-blue h-full px-2 md:px-8 rounded-r-full flex items-center">ポケモンのうりょく●</p>
             </div>
-            <div class="bg-about-title-bg-command py-4 flex-1 flex justify-center items-center gap-4 md:gap-14 h-full max-h-[100px]">
+            <div class="bg-about-title-bg-command py-4 flex-1 flex justify-center items-center gap-4 md:gap-14 h-full">
                 <div class="flex flex-col md:flex-row justify-end items-center gap-1 md:gap-2">
                     <div class="cross-key-container relative">
                         <div class="btn cross-key-btn top-mark"></div>
@@ -158,17 +158,17 @@
                         <div class="btn cross-key-btn right-mark"></div>
                         <div class="btn cross-key-btn bottom-mark"></div>
                     </div>
-                    <p class="switch-text cursor-pointer text-sm md:text-5xl">きりかえ</p>
+                    <p class="switch-text cursor-pointer text-[12px] md:text-4xl">きりかえ</p>
                 </div>
                 <div class="flex flex-col md:flex-row justify-between items-center gap-1 md:gap-2">
-                    <p><a href="/" class="a-btn">B</a></p>
-                    <p><a href="/" class="text-sm md:text-5xl">バトル</a></p>
+                    <p><a href="/battle" class="a-btn">B</a></p>
+                    <p><a href="/battle" class="text-[12px] md:text-4xl">バトル</a></p>
                 </div>
             </div>
         </section>
 
         {{--main--}}
-        <section class="border-solid border-about-border w-full flex-1 pb-4 md:pb-0 bg-info-bg flex flex-col gap-6" style="border-width: 8px;" id="about_main">
+        <section class="border-solid border-about-border w-full flex-1 pb-4 md:pb-0 xl:pb-4 bg-info-bg flex flex-col gap-6" style="border-width: 8px;" id="about_main">
             {{--top--}}
             <article class="w-full flex flex-col md:flex-row">
                 {{--left--}}
@@ -179,7 +179,7 @@
                             <p class="text-2xl md:text-5xl">今井 祐輔 <span class="text-blue-500">♂</span></p>
                         </aside>
                         <div class="bg-white mx-4 flex justify-center items-center rounded-md">
-                            <img src="{{asset("storage/img/pokemon02.png")}}" class="w-[80%] h-[200px] md:w-[80%] md:h-[400px] object-cover">
+                            <img src="{{asset("storage/img/pokemon02.png")}}" class="w-[80%] h-[200px] md:w-[80%] md:h-[45dvh] object-cover">
                         </div>
                     </div>
                 </div>
@@ -190,7 +190,7 @@
                     <x-info-detail key="生年月日" value="1996.11.25"></x-info-detail>
                     <x-info-detail key="生息地" value="三重県"></x-info-detail>
                     <div class="flex flex-col md:flex-row items-start md:items-center">
-                        <div class="bg-info-key-bg relative rounded-full w-[150px] md:w-[230px] h-[30px] md:h-[40px] flex items-center justify-center z-20">
+                        <div class="bg-info-key-bg relative rounded-full w-[10rem] h-[30px] md:h-[40px] flex items-center justify-center z-20">
                             <p class="text-white md:text-2xl absolute">目撃情報</p>
                         </div>
 
@@ -232,7 +232,7 @@
             </article>
 
             {{--bottom（じょうほう）--}}
-            <article class="flex justify-center" id="info_bottom_container">
+            <article class="flex justify-center md:mt-[1em]" id="info_bottom_container">
                 <div class="w-[90%] bg-white rounded-lg relative">
                     <div class="absolute -top-[5%] -left-[2%]">
                         <div class="bg-info-key-bg relative rounded-full w-[200px] md:w-[450px] h-[30px] md:h-[40px] flex items-center justify-center z-20">
@@ -249,7 +249,7 @@
             </article>
 
             {{--bottom（のうりょく）--}}
-            <article class="flex justify-center hide" id="ability_bottom_container">
+            <article class="flex justify-center hide md:mt-[1.5em]" id="ability_bottom_container">
                 <div class="w-[95%] md:w-[90%] bg-ability-value-bg rounded-lg relative">
                     <div class="absolute -top-[5%] md:-top-[10%] -left-[2%]">
                         <div class="bg-ability-key-bg relative rounded-full w-[200px] md:w-[450px] h-[30px] md:h-[40px] flex items-center justify-center z-20">
