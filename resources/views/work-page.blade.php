@@ -4,15 +4,15 @@
         <article class="w-full md:w-1/2 flex flex-col pt-6 md:pt-8">
             {{--画像--}}
             <div class="h-1/2 w-full flex items-center justify-center">
-                <img src="{{asset("storage/img/".$personalWorkData[0]["image"])}}" alt="work" class="w-[90%] h-[250px] md:w-[80%] md:h-[80%] object-cover rounded-lg" id="work_img">
+                <img src="{{asset("storage/img/".$personalWorkData[0]["image"])}}" alt="work" class="w-[90%] h-[35dvh] md:w-[85%] md:h-[40dvh] object-cover rounded-lg" id="work_img">
             </div>
 
             <div class="h-1/2 w-full flex flex-col items-center gap-4 mb-4">
                 {{--タイトル--}}
                 <div class="flex justify-center md:justify-end items-center w-full">
-                    <p class="-rotate-180 text-3xl md:text-6xl text-red-500 -mr-6 arrow" id="left_arrow">▶</p>
-                    <p class="w-[90%] md:w-[80%] md:text-4xl py-2 md:py-4 text-center bg-work-dark-yellow rounded-2xl md:tracking-[30px]" id="current_title">個人開発</p>
-                    <p class="text-3xl md:text-6xl text-red-500 -ml-6 arrow" id="right_arrow">▶</p>
+                    <p class="-rotate-180 text-3xl md:text-4xl text-red-500 -mr-6 arrow" id="left_arrow">▶</p>
+                    <p class="w-[90%] md:w-[80%] md:text-2xl py-2 md:py-[0.2em] text-center bg-work-dark-yellow rounded-2xl md:tracking-[30px]" id="current_title">個人開発</p>
+                    <p class="text-3xl md:text-4xl text-red-500 -ml-6 arrow" id="right_arrow">▶</p>
                 </div>
 
                 {{--説明文--}}
