@@ -17,6 +17,12 @@
     justify-content: center;
     align-items: center;
     font-size: 20px;
+}@media (max-width: 768px) {
+    .a-large-btn {
+        width:40px;
+        height: 40px;
+        font-size: 12px;
+    }
 }
 
 .large-cross-key-container {
@@ -26,6 +32,13 @@
     justify-content: center;
     align-items: center;
     position: relative;
+}@media (max-width: 768px) {
+    .large-cross-key-container {
+        width: 120px;
+        height: 120px;
+        border: 2px solid rgba(0, 0, 0, 0.2);
+        border-radius: 50%;
+    }
 }
 
 .large-cross-key-btn {
@@ -42,6 +55,12 @@
     justify-content: center;
     align-items: center;
     font-size: 20px;
+}@media (max-width: 768px) {
+    .large-cross-key-btn {
+        width:40px;
+        height: 40px;
+        font-size: 12px;
+    }
 }
 
 .diagonal-box {
@@ -54,4 +73,42 @@
     justify-content: center;
     color: #333;
     font-weight: bold;
+}
+
+.btn-container{
+    padding: 10px 20px; /* Adjust the padding for desired spacing inside the oval */
+    border: 2px solid rgba(0, 0, 0, 0.2); /* Border around the oval */
+    border-radius: 50px; /* Creates the oval shape */
+    background-color: rgba(255, 255, 255, 0.1); /* Optional: background color inside the oval */
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.rotated-ellipse {
+    position: absolute;
+    top: -20%;
+    left: 50%;
+    width: 150px;
+    height: 60px;
+    background-color: transparent; /* 楕円の背景色を指定 */
+    border: 2px solid rgba(0, 0, 0, 0.2);
+    border-radius: 50%;
+    transform: rotate(-15deg) translate(-50%, -50%);
+    z-index: 1;
+}
+
+.screen-bound{
+    width:50%;
+    height: 30px;
+    color: rgba(66, 86, 123, 0.8);
+    border: 2px solid rgba(0, 0, 0, 0.2);
+    border-radius: 35%;
+    box-shadow: inset -2px -2px 5px rgba(0, 0, 0, 0.6),
+    inset 2px 2px 5px rgba(255, 255, 255, 0.3),
+    2px 2px 5px rgba(0, 0, 0, 0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
 }

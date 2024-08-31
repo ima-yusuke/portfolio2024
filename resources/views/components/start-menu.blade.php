@@ -1,4 +1,4 @@
-<div class="w-[80%] border-solid border-about-border rounded-md bg-white px-4 py-4 shadow-xl cursor-pointer" style="border-width: 8px">
+<div class="w-[80%] border-solid border-about-border rounded-md bg-white px-4 py-[0.5em] md:py-4 shadow-xl cursor-pointer text-sm" style="border-width: 6px">
     @if($flag)
         <a href="/battle">{{$title}}</a>
     @else
