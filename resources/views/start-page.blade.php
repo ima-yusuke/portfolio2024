@@ -1,4 +1,5 @@
 <x-template title="ポートフォリオ" css="app.css">
+{{--PC用--}}
     <div class="w-full min-h-screen flex justify-center items-center gap-20 bg-work-command-bg">
         {{--十字キー--}}
         <div>
@@ -47,4 +48,5 @@
             <p class="absolute top-6 text-white"><span class="text-green-300 mr-2">◉</span>POWER</p>
         </div>
     </div>
+{{--スマホ用--}}
 </x-template>

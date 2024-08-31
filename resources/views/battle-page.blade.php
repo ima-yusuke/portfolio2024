@@ -13,7 +13,7 @@
             </article>
         </section>
 
-        {{-- ポケモンイラスト --}}
+        {{-- ポケモンイラスト（モバイル） --}}
         <article class="md:hidden flex justify-start z-10 mb-[-50px]">
             <x-battle-field src="storage/img/pokemon02.png"></x-battle-field>
         </article>
@@ -21,19 +21,19 @@
         {{-- メニュー --}}
         <section class="w-full">
             {{-- ポケモン詳細 --}}
-            <article class="flex justify-end mr-1 md:mr-24 md:mb-4 z-30 relative">
+            <article class="flex justify-end mr-1 md:mr-[2em] md:mb-[0.5em] z-30 relative">
                 <x-battle-pokemon-detail name="今井 祐輔" sex="♂" hp="60" level="27" flag="true"></x-battle-pokemon-detail>
             </article>
 
-            <div class="flex h-[100px] md:h-[200px] w-full relative">
+            <div class="flex h-[100px] md:h-[11rem] w-full relative">
                 {{-- ポケモンイラスト（PC） --}}
-                <article class="hidden md:flex justify-start md:pl-10 absolute -top-[200%] md:-top-[60%] z-10">
+                <article class="hidden md:flex justify-start md:pl-10 absolute -top-[200%] md:-top-[25vh] z-10 w-full h-full">
                     <x-battle-field src="storage/img/pokemon02.png"></x-battle-field>
                 </article>
 
                 <article class="w-[60%] md:w-[65%] h-full bg-battle-menu-bg border-t-4 border-b-4 border-l-4 border-solid border-yellow-500 z-10">
                     <div class="w-full h-full border-t-8 border-b-8 border-l-8 border-solid border-white md:p-6">
-                        <h1 class="text-white md:text-5xl p-4 md:pl-10 md:pt-8">Yusuke Imaiは どうする？</h1>
+                        <h1 class="text-white md:text-5xl p-4 md:pl-[0.5em] md:pt-[0.5em]">Yusuke Imaiは どうする？</h1>
                     </div>
                 </article>
                 <article class="h-full flex-1 rounded-lg ml-[-15px] z-50">
