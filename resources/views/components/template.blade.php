@@ -12,3 +12,13 @@
 </main>
 </body>
 </html>
+
+<script>
+    if(window.innerWidth <= 768){
+        if (window.location.pathname === '/') {
+            document.getElementsByTagName("body")[0].classList.add('overflow-hidden');
+        }else{
+            document.getElementsByTagName("body")[0].classList.remove('overflow-hidden');
+        }
+    }
+</script>
