@@ -98,12 +98,12 @@
     z-index: 1;
 }
 
-.screen-bound{
-    width:50%;
+.screen-bound {
+    width: 50%;
     height: 30px;
     color: rgba(66, 86, 123, 0.8);
     border: 2px solid rgba(0, 0, 0, 0.2);
-    border-radius: 35%;
+    border-radius: 10%;
     box-shadow: inset -2px -2px 5px rgba(0, 0, 0, 0.6),
     inset 2px 2px 5px rgba(255, 255, 255, 0.3),
     2px 2px 5px rgba(0, 0, 0, 0.4);
@@ -112,3 +112,12 @@
     align-items: center;
     font-size: 20px;
 }
+
+.left-item {
+    margin-right: -1.5px; /* 右ボーダーが重なるように調整 */
+}
+
+.right-item {
+    margin-left: -1.5px; /* 左ボーダーが重なるように調整 */
+}
+

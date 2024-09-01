@@ -62,9 +62,10 @@
             </div>
 
             <div class="flex w-full">
-                <p class="screen-bound"></p>
-                <p class="screen-bound"></p>
+                <p class="screen-bound left-item"></p>
+                <p class="screen-bound right-item"></p>
             </div>
+
 
             <section class="h-[45%] w-full flex flex-col justify-start items-center mt-2 relative">
 
