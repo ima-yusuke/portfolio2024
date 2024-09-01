@@ -3,6 +3,7 @@
     border-bottom-right-radius: 10%;
 }
 
+/*ABボタン*/
 .a-large-btn{
     width:60px;
     height: 60px;
@@ -25,6 +26,7 @@
     }
 }
 
+/*十字キーコンテイナー*/
 .large-cross-key-container {
     width: 180px;
     height: 180px;
@@ -41,6 +43,7 @@
     }
 }
 
+/*十字キー各ボタン*/
 .large-cross-key-btn {
     width:60px;
     height: 60px;
@@ -63,6 +66,7 @@
     }
 }
 
+/*音声箇所（PC)*/
 .diagonal-box {
     width: 200px;
     height: 10px;
@@ -75,16 +79,21 @@
     font-weight: bold;
 }
 
-.btn-container{
-    padding: 10px 20px; /* Adjust the padding for desired spacing inside the oval */
-    border: 2px solid rgba(0, 0, 0, 0.2); /* Border around the oval */
-    border-radius: 50px; /* Creates the oval shape */
-    background-color: rgba(255, 255, 255, 0.1); /* Optional: background color inside the oval */
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
+/*ゲーム機器（モバイル）*/
+.game-container {
+    /*border-radius: 30%;*/
+}@media (max-width: 768px) {
+    .game-container {
+        box-shadow:
+            inset 0 5px 10px rgba(0, 0, 0, 0.2), /* Inner shadow for depth */
+            0 10px 20px rgba(0, 0, 0, 0.3), /* Outer shadow for overall 3D effect */
+            -5px -5px 15px rgba(255, 255, 255, 0.1); /* Light reflection effect */
+        border-radius: 12px; /* Slight rounding for a smoother edge */
+        background: linear-gradient(145deg, rgb(105, 92, 162), rgb(125, 112, 182)); /* Gradient with desired color */
+    }
 }
 
+/*ABボタン周りボーダー（モバイル）*/
 .rotated-ellipse {
     position: absolute;
     top: -20%;
@@ -98,6 +107,7 @@
     z-index: 1;
 }
 
+/*上下画面の境目（モバイル）*/
 .screen-bound {
     width: 50%;
     height: 30px;
@@ -113,6 +123,7 @@
     font-size: 20px;
 }
 
+/*境目各円柱（モバイル）*/
 .left-item {
     margin-right: -1.5px; /* 右ボーダーが重なるように調整 */
 }
@@ -121,13 +132,5 @@
     margin-left: -1.5px; /* 左ボーダーが重なるように調整 */
 }
 
-.game-container {
-    box-shadow:
-        inset 0 5px 10px rgba(0, 0, 0, 0.2), /* Inner shadow for depth */
-        0 10px 20px rgba(0, 0, 0, 0.3), /* Outer shadow for overall 3D effect */
-        -5px -5px 15px rgba(255, 255, 255, 0.1); /* Light reflection effect */
-    border-radius: 12px; /* Slight rounding for a smoother edge */
-    background: linear-gradient(145deg, rgb(105, 92, 162), rgb(125, 112, 182)); /* Gradient with desired color */
-}
 
 

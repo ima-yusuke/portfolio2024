@@ -4,11 +4,11 @@
         {{--十字キー--}}
         <div>
             <div class="large-cross-key-container relative">
-                <div class="btn large-cross-key-btn top-mark">▲</div>
+                <div class="btn large-cross-key-btn top-mark" id="top_arrow_pc">▲</div>
                 <div class="btn large-cross-key-btn left-mark">▲</div>
                 <div class="btn large-cross-key-btn center-mark">●</div>
                 <button class="btn large-cross-key-btn right-mark" id="right_btn">▲</button>
-                <div class="btn large-cross-key-btn bottom-mark">▲</div>
+                <div class="btn large-cross-key-btn bottom-mark" id="bottom_arrow_pc">▲</div>
             </div>
             <aside class="absolute bottom-28 flex flex-col gap-6">
                 <div class="flex transform rotate-[10deg]">
@@ -36,7 +36,7 @@
         <div>
             <aside class="flex gap-10">
                 <p><a class="a-large-btn mt-8">B</a></p>
-                <p><a class="a-large-btn">A</a></p>
+                <p><a class="a-large-btn" id="a_btn_pc">A</a></p>
             </aside>
             <aside class="absolute bottom-32 flex flex-col gap-6">
                 <p class="diagonal-box rounded-md"></p>
@@ -76,11 +76,11 @@
                     {{--十字キー--}}
                     <div>
                         <div class="large-cross-key-container relative">
-                            <div class="btn large-cross-key-btn top-mark">▲</div>
+                            <div class="btn large-cross-key-btn top-mark" id="top_arrow_mobile">▲</div>
                             <div class="btn large-cross-key-btn left-mark">▲</div>
                             <div class="btn large-cross-key-btn center-mark">●</div>
                             <button class="btn large-cross-key-btn right-mark" id="right_btn">▲</button>
-                            <div class="btn large-cross-key-btn bottom-mark">▲</div>
+                            <div class="btn large-cross-key-btn bottom-mark" id="bottom_arrow_mobile">▲</div>
                         </div>
                     </div>
 
@@ -90,7 +90,7 @@
                             <div class="rotated-ellipse"></div>
                             <div class="flex gap-4 relative z-10">
                                 <p><a class="a-large-btn">B</a></p>
-                                <p><a class="a-large-btn -mt-6">A</a></p>
+                                <p><a class="a-large-btn -mt-6" id="a_btn_mobile">A</a></p>
                             </div>
                         </aside>
                     </div>
@@ -126,4 +126,5 @@
         </section>
 
     </div>
+    @vite('resources/js/start.js')
 </x-template>
