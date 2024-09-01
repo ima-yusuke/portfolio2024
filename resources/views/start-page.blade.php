@@ -50,8 +50,8 @@
     </div>
 {{--スマホ用--}}
     <div class="md:hidden w-full h-full  flex flex-col justify-center items-center bg-gray-300">
-        <section class="w-[90%] h-[95dvh] bg-work-command-bg shadow-xl rounded-lg overflow-hidden">
-            {{--ゲームスクリーン--}}
+        <section class="w-[90%] h-[95dvh] bg-work-command-bg shadow-xl rounded-lg overflow-hidden game-container">
+            {{--上画面--}}
             <div class="h-[45%] w-[90%] border-solid border-gray-800 game-screen-border rounded-lg m-4 flex flex-col" style="border-width: 15px">
                 <article class="w-full bg-work-bg flex flex-col items-center justify-center gap-4 py-2 flex-grow">
                     <x-start-menu title="さいしょから はじめる" :flag="true"/>
@@ -61,12 +61,13 @@
                 <p class="text-white bg-gray-800 w-full text-center pt-2 md:text-2xl">YUSUKE IMAI PORTFOLIO</p>
             </div>
 
+            {{--上下境目--}}
             <div class="flex w-full">
                 <p class="screen-bound left-item"></p>
                 <p class="screen-bound right-item"></p>
             </div>
 
-
+            {{--下画面--}}
             <section class="h-[45%] w-full flex flex-col justify-start items-center mt-2 relative">
 
                 <p class="text-white">◉</p>
@@ -125,5 +126,4 @@
         </section>
 
     </div>
-
 </x-template>

@@ -121,3 +121,13 @@
     margin-left: -1.5px; /* 左ボーダーが重なるように調整 */
 }
 
+.game-container {
+    box-shadow:
+        inset 0 5px 10px rgba(0, 0, 0, 0.2), /* Inner shadow for depth */
+        0 10px 20px rgba(0, 0, 0, 0.3), /* Outer shadow for overall 3D effect */
+        -5px -5px 15px rgba(255, 255, 255, 0.1); /* Light reflection effect */
+    border-radius: 12px; /* Slight rounding for a smoother edge */
+    background: linear-gradient(145deg, rgb(105, 92, 162), rgb(125, 112, 182)); /* Gradient with desired color */
+}
+
+
