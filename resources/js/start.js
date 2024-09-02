@@ -16,7 +16,7 @@ let detailMenu = document.getElementsByClassName('detail-menu');
 let countPc = 0;
 let countMobile = 3;
 let currentCountPc = 1000;
-let currentCountMobile = 0;
+let currentCountMobile = -1000;
 let scrollFlag = false;
 let nameFlag = false;
 
@@ -142,7 +142,7 @@ B_BTN_MOBILE.addEventListener('click', () => {
         }
     }
     countMobile = currentCountMobile;
-    currentCountMobile = 0;
+    currentCountMobile = -1000;
     detailMenu[3].style.display = 'none';
     detailMenu[4].style.display = 'none';
     detailMenu[5].style.display = 'none';
@@ -194,7 +194,7 @@ for (let i = 0; i < CLOSE_DETAIL_BTN.length; i++) {
         if (i<3){
             currentCountPc = 1000;
         }else{
-            currentCountMobile = 0;
+            currentCountMobile = -1000;
         }
     })
 }
