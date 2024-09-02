@@ -15,8 +15,8 @@ let startMenu = document.getElementsByClassName('start-menu');
 let detailMenu = document.getElementsByClassName('detail-menu');
 let countPc = 0;
 let countMobile = 3;
-let currentCountPc = 0;
-let currentCountMobile = 3;
+let currentCountPc = 1000;
+let currentCountMobile = 0;
 let scrollFlag = false;
 let nameFlag = false;
 
