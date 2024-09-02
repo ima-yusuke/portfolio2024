@@ -33,7 +33,7 @@
 
                 <article class="w-[60%] md:w-[65%] h-full bg-battle-menu-bg border-t-4 border-b-4 border-l-4 border-solid border-yellow-500 z-10">
                     <div class="w-full h-full border-t-8 border-b-8 border-l-8 border-solid border-white md:p-6">
-                        <h1 class="text-white md:text-5xl p-4 md:pl-[0.5em] md:pt-[0.5em]">Yusuke Imaiは どうする？</h1>
+                        <h1 class="text-white md:text-5xl p-4 md:pl-[0.5em] md:pt-[0.5em]" id="player_name">Yusuke Imaiは どうする？</h1>
                     </div>
                 </article>
                 <article class="h-full flex-1 rounded-lg ml-[-15px] z-50">
@@ -51,4 +51,5 @@
             </div>
         </section>
     </div>
+    @vite('resources/js/battle.js')
 </x-template>
