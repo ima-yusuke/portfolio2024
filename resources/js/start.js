@@ -65,6 +65,11 @@ B_BTN_PC.addEventListener('click', () => {
             startMenu[i].style.opacity = '1';
         }
     }
+    if(currentCountPc === 0){
+        REGISTER_NAME_BTN_PC.style.backgroundColor = '';
+        REGISTER_NAME_BTN_PC.style.color = 'black';
+        document.getElementById('name_input_pc').value = '';
+    }
     countPc = currentCountPc;
     currentCountPc = 1000;
     nameFlag = false;
@@ -142,6 +147,11 @@ B_BTN_MOBILE.addEventListener('click', () => {
             startMenu[i].style.opacity = '1';
         }
     }
+    if(currentCountMobile === 3){
+        REGISTER_NAME_BTN_MOBILE.style.backgroundColor = '';
+        REGISTER_NAME_BTN_MOBILE.style.color = 'black';
+        document.getElementById('name_input_mobile').value = '';
+    }
     countMobile = currentCountMobile;
     currentCountMobile = -1000;
     nameFlag = false;
@@ -199,6 +209,17 @@ for (let i = 0; i < CLOSE_DETAIL_BTN.length; i++) {
             currentCountMobile = -1000;
         }
         nameFlag = false;
+
+        if(currentCountPc === 0){
+            REGISTER_NAME_BTN_PC.style.backgroundColor = '';
+            REGISTER_NAME_BTN_PC.style.color = 'black';
+            document.getElementById('name_input_pc').value = '';
+        }
+        if(currentCountMobile === 3){
+            REGISTER_NAME_BTN_MOBILE.style.backgroundColor = '';
+            REGISTER_NAME_BTN_MOBILE.style.color = 'black';
+            document.getElementById('name_input_mobile').value = '';
+        }
     })
 }
 
