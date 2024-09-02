@@ -201,6 +201,13 @@ for (let i = 0; i < CLOSE_DETAIL_BTN.length; i++) {
     CLOSE_DETAIL_BTN[i].addEventListener('click', () => {
         for (let i = 0; i < startMenu.length; i++) {
             startMenu[i].style.display = 'block';
+            startMenu[i].style.opacity = '0.6';
+            if(i==currentCountPc){
+                startMenu[i].style.opacity = '1';
+            }
+            if(i==currentCountMobile){
+                startMenu[i].style.opacity = '1';
+            }
         }
         detailMenu[i].style.display = 'none';
         if (i<3){
@@ -209,6 +216,7 @@ for (let i = 0; i < CLOSE_DETAIL_BTN.length; i++) {
             currentCountMobile = -1000;
         }
         nameFlag = false;
+
 
         if(currentCountPc === 0){
             REGISTER_NAME_BTN_PC.style.backgroundColor = '';
