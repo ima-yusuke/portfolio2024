@@ -76,7 +76,7 @@
                     <x-start-menu title="このサイト について" :flag="false"/>
                     <x-start-menu title="コンタクト じょうほう" :flag="false"/>
                     <x-start-detail-pc>
-                        <aside class="w-full flex flex-col items-center gap-4">
+                        <aside class="w-full flex flex-col items-center justify-center h-full gap-4">
                             <p class="text-gray-800">なまえを おしえて くれるかい！</p>
                             <input placeholder="ユウスケ" type="text" class="w-[90%]" autofocus id="name_input_mobile">
                             <button class="border border-solid border-gray-800 rounded-lg px-2 py-1 text-sm" id="register_name_btn_mobile">とうろく</button>
@@ -88,7 +88,7 @@
                         </p>
                     </x-start-detail-pc>
                     <x-start-detail-pc>
-                        <aside class="flex flex-col items-center gap-2">
+                        <aside class="flex flex-col items-center justify-center h-full gap-2">
                             <p class="text-gray-800">メールアドレス</p>
                             <p class="text-blue-800 underline"><a href="mailto:yu_suke1125aadxyz@icloud.com">yu_suke1125aadxyz@icloud.com</a></p>
                         </aside>
