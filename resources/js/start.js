@@ -1,3 +1,4 @@
+const GAME_SCREEN_MOBILE = document.getElementById('game_screen_mobile');
 const TOP_ARROW_PC = document.getElementById('top_arrow_pc');
 const BOTTOM_ARROW_PC = document.getElementById('bottom_arrow_pc');
 const TOP_ARROW_MOBILE = document.getElementById('top_arrow_mobile');
@@ -92,6 +93,19 @@ REGISTER_NAME_BTN_MOBILE.addEventListener('click', () => {
     sessionStorage.setItem('name', newName);
     location.href = '/battle';
 })
+
+TOP_ARROW_MOBILE.addEventListener('click', function() {
+    GAME_SCREEN_MOBILE.scrollBy({
+        top: -100,
+        behavior: 'smooth' // スムーズなスクロール
+    });
+})
+BOTTOM_ARROW_MOBILE.addEventListener('click', function() {
+    GAME_SCREEN_MOBILE.scrollBy({
+        top: 100,
+        behavior: 'smooth' // スムーズなスクロール
+    });
+});
 
 // 共通
 for (let i = 0; i < startMenu.length; i++) {
