@@ -15,6 +15,10 @@ let startMenu = document.getElementsByClassName('start-menu');
 let detailMenu = document.getElementsByClassName('detail-menu');
 let countPc = 0;
 let countMobile = 3;
+let currentCountPc = 0;
+let currentCountMobile = 3;
+let scrollFlag = false;
+let nameFlag = false;
 
 // pc
 BOTTOM_ARROW_PC.addEventListener('click', () => {
@@ -22,6 +26,12 @@ BOTTOM_ARROW_PC.addEventListener('click', () => {
     startMenu[countPc].style.opacity = '0.6';
     countPc++;
     startMenu[countPc].style.opacity = '1';
+
+    if(currentCountPc===0){
+        REGISTER_NAME_BTN_PC.style.backgroundColor = 'rgb(41,158,127)';
+        REGISTER_NAME_BTN_PC.style.color = 'white';
+        nameFlag = true;
+    }
 });
 
 TOP_ARROW_PC.addEventListener('click', () => {
@@ -29,16 +39,33 @@ TOP_ARROW_PC.addEventListener('click', () => {
     startMenu[countPc].style.opacity = '0.6';
     countPc--;
     startMenu[countPc].style.opacity = '1';
+
+    if(nameFlag){
+        REGISTER_NAME_BTN_PC.style.backgroundColor = '';
+        REGISTER_NAME_BTN_PC.style.color = 'black';
+        document.getElementById('name_input_pc').focus();
+        nameFlag = false;
+    }
 })
 
 A_BTN_PC.addEventListener('click', () => {
+    if(nameFlag) {
+        REGISTER_NAME_BTN_PC.click();
+        return;
+    }
     startMenu[countPc].click();
+
 })
 
 B_BTN_PC.addEventListener('click', () => {
     for (let i = 0; i < startMenu.length; i++) {
         startMenu[i].style.display = 'block';
+        startMenu[i].style.opacity = '0.6';
+        if(i==currentCountPc){
+            startMenu[i].style.opacity = '1';
+        }
     }
+    countPc = currentCountPc;
     detailMenu[0].style.display = 'none';
     detailMenu[1].style.display = 'none';
     detailMenu[2].style.display = 'none';
@@ -57,27 +84,63 @@ REGISTER_NAME_BTN_PC.addEventListener('click', () => {
 
 // モバイル
 BOTTOM_ARROW_MOBILE.addEventListener('click', () => {
+    if(scrollFlag) {
+        GAME_SCREEN_MOBILE.scrollBy({
+            top: 100,
+            behavior: 'smooth' // スムーズなスクロール
+        });
+    }
+
     if(countMobile === 5) return;
     startMenu[countMobile].style.opacity = '0.6';
     countMobile++;
     startMenu[countMobile].style.opacity = '1';
+
+    if(currentCountMobile===3){
+        REGISTER_NAME_BTN_MOBILE.style.backgroundColor = 'rgb(41,158,127)';
+        REGISTER_NAME_BTN_MOBILE.style.color = 'white';
+        nameFlag = true;
+    }
 })
 
 TOP_ARROW_MOBILE.addEventListener('click', () => {
+    if (scrollFlag) {
+        GAME_SCREEN_MOBILE.scrollBy({
+            top: -100,
+            behavior: 'smooth' // スムーズなスクロール
+        });
+    }
+
     if(countMobile === 3) return;
     startMenu[countMobile].style.opacity = '0.6';
     countMobile--;
     startMenu[countMobile].style.opacity = '1';
+
+    if(nameFlag){
+        REGISTER_NAME_BTN_MOBILE.style.backgroundColor = '';
+        REGISTER_NAME_BTN_MOBILE.style.color = 'black';
+        document.getElementById('name_input_mobile').focus();
+        nameFlag = false;
+    }
 })
 
 A_BTN_MOBILE.addEventListener('click', () => {
+    if(nameFlag) {
+        REGISTER_NAME_BTN_MOBILE.click();
+        return;
+    }
     startMenu[countMobile].click();
 })
 
 B_BTN_MOBILE.addEventListener('click', () => {
-    for (let i = 0; i < startMenu.length; i++) {
+    for (let i = 3; i < startMenu.length; i++) {
         startMenu[i].style.display = 'block';
+        startMenu[i].style.opacity = '0.6';
+        if(i==currentCountMobile){
+            startMenu[i].style.opacity = '1';
+        }
     }
+    countMobile = currentCountMobile;
     detailMenu[3].style.display = 'none';
     detailMenu[4].style.display = 'none';
     detailMenu[5].style.display = 'none';
@@ -94,22 +157,10 @@ REGISTER_NAME_BTN_MOBILE.addEventListener('click', () => {
     location.href = '/battle';
 })
 
-TOP_ARROW_MOBILE.addEventListener('click', function() {
-    GAME_SCREEN_MOBILE.scrollBy({
-        top: -100,
-        behavior: 'smooth' // スムーズなスクロール
-    });
-})
-BOTTOM_ARROW_MOBILE.addEventListener('click', function() {
-    GAME_SCREEN_MOBILE.scrollBy({
-        top: 100,
-        behavior: 'smooth' // スムーズなスクロール
-    });
-});
-
 // 共通
 for (let i = 0; i < startMenu.length; i++) {
     startMenu[i].addEventListener('click', () => {
+        scrollFlag = false;
         for (let i = 0; i < startMenu.length; i++) {
             startMenu[i].style.display = 'none';
         }
@@ -120,9 +171,16 @@ for (let i = 0; i < startMenu.length; i++) {
         if (i==3) {
             document.getElementById('name_input_mobile').focus();
         }
+        if(i==4){
+            scrollFlag = true;
+        }
+        if(i<3){
+            currentCountPc= i;
+        }else {
+            currentCountMobile = i;
+        }
     })
 }
-
 
 
 for (let i = 0; i < CLOSE_DETAIL_BTN.length; i++) {
