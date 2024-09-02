@@ -175,6 +175,7 @@ REGISTER_NAME_BTN_MOBILE.addEventListener('click', () => {
 for (let i = 0; i < startMenu.length; i++) {
     startMenu[i].addEventListener('click', () => {
         scrollFlag = false;
+
         for (let i = 0; i < startMenu.length; i++) {
             startMenu[i].style.display = 'none';
         }
@@ -189,8 +190,10 @@ for (let i = 0; i < startMenu.length; i++) {
             scrollFlag = true;
         }
         if(i<3){
+            countPc = i;
             currentCountPc= i;
         }else {
+            countMobile = i;
             currentCountMobile = i;
         }
     })
