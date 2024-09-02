@@ -66,6 +66,7 @@ B_BTN_PC.addEventListener('click', () => {
         }
     }
     countPc = currentCountPc;
+    currentCountPc = 1000;
     detailMenu[0].style.display = 'none';
     detailMenu[1].style.display = 'none';
     detailMenu[2].style.display = 'none';
@@ -141,6 +142,7 @@ B_BTN_MOBILE.addEventListener('click', () => {
         }
     }
     countMobile = currentCountMobile;
+    currentCountMobile = 0;
     detailMenu[3].style.display = 'none';
     detailMenu[4].style.display = 'none';
     detailMenu[5].style.display = 'none';
@@ -189,6 +191,11 @@ for (let i = 0; i < CLOSE_DETAIL_BTN.length; i++) {
             startMenu[i].style.display = 'block';
         }
         detailMenu[i].style.display = 'none';
+        if (i<3){
+            currentCountPc = 1000;
+        }else{
+            currentCountMobile = 0;
+        }
     })
 }
 
