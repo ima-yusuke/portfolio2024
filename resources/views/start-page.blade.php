@@ -6,7 +6,7 @@
             <div class="large-cross-key-container relative">
                 <div class="btn large-cross-key-btn top-mark" id="top_arrow_pc">▲</div>
                 <div class="btn large-cross-key-btn left-mark">▲</div>
-                <div class="btn large-cross-key-btn center-mark">●</div>
+                <div class="btn large-cross-key-btn center-mark"></div>
                 <button class="btn large-cross-key-btn right-mark" id="right_btn">▲</button>
                 <div class="btn large-cross-key-btn bottom-mark" id="bottom_arrow_pc">▲</div>
             </div>
@@ -123,7 +123,7 @@
                         <div class="large-cross-key-container relative">
                             <div class="btn large-cross-key-btn top-mark" id="top_arrow_mobile">▲</div>
                             <div class="btn large-cross-key-btn left-mark">▲</div>
-                            <div class="btn large-cross-key-btn center-mark">●</div>
+                            <div class="btn large-cross-key-btn center-mark"></div>
                             <button class="btn large-cross-key-btn right-mark" id="right_btn">▲</button>
                             <div class="btn large-cross-key-btn bottom-mark" id="bottom_arrow_mobile">▲</div>
                         </div>
