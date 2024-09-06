@@ -32,7 +32,7 @@
                    <aside class="w-full flex flex-col items-center gap-6">
                        <p class="text-gray-800">なまえを おしえて くれるかい！</p>
                        <input placeholder="ユウスケ" type="text" class="w-[70%]" autofocus id="name_input_pc">
-                       <button class="border border-solid border-gray-800 rounded-lg px-4" id="register_name_btn_pc">とうろく</button>
+                       <button class="border border-solid border-gray-800 rounded-lg px-4 register-name-btn">とうろく</button>
                    </aside>
                 </x-start-detail-pc>
                 <x-start-detail-pc>
@@ -79,7 +79,7 @@
                         <aside class="w-full flex flex-col items-center justify-center h-full gap-4">
                             <p class="text-gray-800">なまえを おしえて くれるかい！</p>
                             <input placeholder="ユウスケ" type="text" class="w-[90%]" autofocus id="name_input_mobile">
-                            <button class="border border-solid border-gray-800 rounded-lg px-2 py-1 text-sm" id="register_name_btn_mobile">とうろく</button>
+                            <button class="border border-solid border-gray-800 rounded-lg px-2 py-1 text-sm register-name-btn">とうろく</button>
                         </aside>
                     </x-start-detail-pc>
                     <x-start-detail-pc>

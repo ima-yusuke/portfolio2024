@@ -8,8 +8,7 @@ const A_BTN_MOBILE = document.getElementById('a_btn_mobile');
 const B_BTN_PC = document.getElementById('b_btn_pc');
 const B_BTN_MOBILE = document.getElementById('b_btn_mobile');
 const CLOSE_DETAIL_BTN = document.getElementsByClassName('close-detail-btn');
-const REGISTER_NAME_BTN_PC = document.getElementById('register_name_btn_pc');
-const REGISTER_NAME_BTN_MOBILE = document.getElementById('register_name_btn_mobile');
+const REGISTER_NAME_BTN = document.getElementsByClassName('register-name-btn');
 
 let startMenu = document.getElementsByClassName('start-menu');
 let detailMenu = document.getElementsByClassName('detail-menu');
@@ -28,8 +27,7 @@ BOTTOM_ARROW_PC.addEventListener('click', () => {
     startMenu[countPc].style.opacity = '1';
 
     if(currentCountPc===0){
-        REGISTER_NAME_BTN_PC.style.backgroundColor = 'rgb(41,158,127)';
-        REGISTER_NAME_BTN_PC.style.color = 'white';
+        SwitchInput(true);
         nameFlag = true;
     }
 });
@@ -41,8 +39,7 @@ TOP_ARROW_PC.addEventListener('click', () => {
     startMenu[countPc].style.opacity = '1';
 
     if(nameFlag){
-        REGISTER_NAME_BTN_PC.style.backgroundColor = '';
-        REGISTER_NAME_BTN_PC.style.color = 'black';
+        SwitchInput(false);
         document.getElementById('name_input_pc').focus();
         nameFlag = false;
     }
@@ -50,7 +47,7 @@ TOP_ARROW_PC.addEventListener('click', () => {
 
 A_BTN_PC.addEventListener('click', () => {
     if(nameFlag) {
-        REGISTER_NAME_BTN_PC.click();
+        REGISTER_NAME_BTN[0].click();
         return;
     }
     startMenu[countPc].click();
@@ -58,35 +55,21 @@ A_BTN_PC.addEventListener('click', () => {
 })
 
 B_BTN_PC.addEventListener('click', () => {
-    for (let i = 0; i < startMenu.length; i++) {
-        startMenu[i].style.display = 'block';
-        startMenu[i].style.opacity = '0.6';
-        if(i==currentCountPc){
-            startMenu[i].style.opacity = '1';
-        }
+
+    if(currentCountPc === 1000){
+        return;
     }
-    if(currentCountPc === 0){
-        REGISTER_NAME_BTN_PC.style.backgroundColor = '';
-        REGISTER_NAME_BTN_PC.style.color = 'black';
-        document.getElementById('name_input_pc').value = '';
-    }
+
+    SwitchMenuOpacity(currentCountPc);
+
+    SwitchInput(false);
+
     countPc = currentCountPc;
     currentCountPc = 1000;
     nameFlag = false;
     detailMenu[0].style.display = 'none';
     detailMenu[1].style.display = 'none';
     detailMenu[2].style.display = 'none';
-})
-
-REGISTER_NAME_BTN_PC.addEventListener('click', () => {
-    let input = document.getElementById('name_input_pc');
-    let newName = input.value.trim();
-    if(newName === ''){
-        alert('なまえを にゅうりょくしてね');
-        return;
-    }
-    sessionStorage.setItem('name', newName);
-    location.href = '/battle';
 })
 
 // モバイル
@@ -104,8 +87,7 @@ BOTTOM_ARROW_MOBILE.addEventListener('click', () => {
     startMenu[countMobile].style.opacity = '1';
 
     if(currentCountMobile===3){
-        REGISTER_NAME_BTN_MOBILE.style.backgroundColor = 'rgb(41,158,127)';
-        REGISTER_NAME_BTN_MOBILE.style.color = 'white';
+        SwitchInput(true);
         nameFlag = true;
     }
 })
@@ -124,8 +106,7 @@ TOP_ARROW_MOBILE.addEventListener('click', () => {
     startMenu[countMobile].style.opacity = '1';
 
     if(nameFlag){
-        REGISTER_NAME_BTN_MOBILE.style.backgroundColor = '';
-        REGISTER_NAME_BTN_MOBILE.style.color = 'black';
+        SwitchInput(false);
         document.getElementById('name_input_mobile').focus();
         nameFlag = false;
     }
@@ -133,25 +114,21 @@ TOP_ARROW_MOBILE.addEventListener('click', () => {
 
 A_BTN_MOBILE.addEventListener('click', () => {
     if(nameFlag) {
-        REGISTER_NAME_BTN_MOBILE.click();
+        REGISTER_NAME_BTN[1].click();
         return;
     }
     startMenu[countMobile].click();
 })
 
 B_BTN_MOBILE.addEventListener('click', () => {
-    for (let i = 3; i < startMenu.length; i++) {
-        startMenu[i].style.display = 'block';
-        startMenu[i].style.opacity = '0.6';
-        if(i==currentCountMobile){
-            startMenu[i].style.opacity = '1';
-        }
+
+    if (currentCountMobile === -1000) {
+        return;
     }
-    if(currentCountMobile === 3){
-        REGISTER_NAME_BTN_MOBILE.style.backgroundColor = '';
-        REGISTER_NAME_BTN_MOBILE.style.color = 'black';
-        document.getElementById('name_input_mobile').value = '';
-    }
+
+   SwitchMenuOpacity(currentCountMobile);
+   SwitchInput(false);
+
     countMobile = currentCountMobile;
     currentCountMobile = -1000;
     nameFlag = false;
@@ -160,18 +137,9 @@ B_BTN_MOBILE.addEventListener('click', () => {
     detailMenu[5].style.display = 'none';
 })
 
-REGISTER_NAME_BTN_MOBILE.addEventListener('click', () => {
-    let input = document.getElementById('name_input_mobile');
-    let newName = input.value.trim();
-    if(newName === ''){
-        alert('なまえを にゅうりょくしてね');
-        return;
-    }
-    sessionStorage.setItem('name', newName);
-    location.href = '/battle';
-})
-
 // 共通
+
+// 初期画面/MENU選択時の処理
 for (let i = 0; i < startMenu.length; i++) {
     startMenu[i].addEventListener('click', () => {
         scrollFlag = false;
@@ -199,19 +167,31 @@ for (let i = 0; i < startMenu.length; i++) {
     })
 }
 
+// 初期画面/MENUのopacityを変更
+function SwitchMenuOpacity(showIndex){
+    for (let i = 0; i < startMenu.length; i++) {
+        startMenu[i].style.display = 'block';
+        startMenu[i].style.opacity = '0.6';
+        if(i===showIndex){
+            startMenu[i].style.opacity = '1';
+        }
+    }
+}
 
+// 各画面/閉じるボタンの処理
 for (let i = 0; i < CLOSE_DETAIL_BTN.length; i++) {
     CLOSE_DETAIL_BTN[i].addEventListener('click', () => {
-        for (let i = 0; i < startMenu.length; i++) {
-            startMenu[i].style.display = 'block';
-            startMenu[i].style.opacity = '0.6';
-            if(i==currentCountPc){
-                startMenu[i].style.opacity = '1';
-            }
-            if(i==currentCountMobile){
-                startMenu[i].style.opacity = '1';
-            }
+
+        // MENUのopacityを変更
+        if(i<3){
+            SwitchMenuOpacity(currentCountPc);
+        }else{
+            SwitchMenuOpacity(currentCountMobile);
         }
+
+        // Inputのリセット
+        SwitchInput(false);
+
         detailMenu[i].style.display = 'none';
         if (i<3){
             currentCountPc = 1000;
@@ -219,20 +199,54 @@ for (let i = 0; i < CLOSE_DETAIL_BTN.length; i++) {
             currentCountMobile = -1000;
         }
         nameFlag = false;
-
-
-        if(currentCountPc === 0){
-            REGISTER_NAME_BTN_PC.style.backgroundColor = '';
-            REGISTER_NAME_BTN_PC.style.color = 'black';
-            document.getElementById('name_input_pc').value = '';
-        }
-        if(currentCountMobile === 3){
-            REGISTER_NAME_BTN_MOBILE.style.backgroundColor = '';
-            REGISTER_NAME_BTN_MOBILE.style.color = 'black';
-            document.getElementById('name_input_mobile').value = '';
-        }
     })
 }
 
+// 名前登録/Inputの背景色を変更
+function SwitchInput(flag){
+    if(flag){
+        if(currentCountPc===0){
+            REGISTER_NAME_BTN[0].style.backgroundColor = 'rgb(41,158,127)';
+            REGISTER_NAME_BTN[0].style.color = 'white';
+        }
+        if(currentCountMobile===3){
+            REGISTER_NAME_BTN[1].style.backgroundColor = 'rgb(41,158,127)';
+            REGISTER_NAME_BTN[1].style.color = 'white';
+        }
+    }else{
+        if(currentCountPc === 0){
+            REGISTER_NAME_BTN[0].style.backgroundColor = '';
+            REGISTER_NAME_BTN[0].style.color = 'black';
+            document.getElementById('name_input_pc').value = '';
+        }
+        if(currentCountMobile === 3){
+            REGISTER_NAME_BTN[1].style.backgroundColor = '';
+            REGISTER_NAME_BTN[1].style.color = 'black';
+            document.getElementById('name_input_mobile').value = '';
+        }
+    }
+
+}
+
+// 名前登録/sessionStorage登録&battle画面へ遷移
+for (let i = 0; i < REGISTER_NAME_BTN.length; i++) {
+    REGISTER_NAME_BTN[i].addEventListener('click', () => {
+        let input;
+        let newName;
+        if(i===0){
+            input = document.getElementById('name_input_pc');
+            newName = input.value.trim();
+        }else{
+            input = document.getElementById('name_input_mobile');
+            newName = input.value.trim();
+        }
+        if(newName === ''){
+            alert('なまえを にゅうりょくしてね');
+            return;
+        }
+        sessionStorage.setItem('name', newName);
+        location.href = '/battle';
+    })
+}
 
 
