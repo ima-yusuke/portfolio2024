@@ -22,6 +22,9 @@ let nameFlag = false;
 
 function StartAnimation(){
 
+    // アニメーション中はクリックを無効化
+    document.body.style.pointerEvents = 'none';
+
     let welcomeTitle = null;
 
     if(window.innerWidth > 768){
@@ -40,6 +43,8 @@ function StartAnimation(){
                 welcomeTitle.style.display = "none";
                 setTimeout(function() {
                     ShowMenu();
+                    // クリックイベントを再有効化
+                    document.body.style.pointerEvents = 'auto';
                 },100);
             },2000);
         },1500);
