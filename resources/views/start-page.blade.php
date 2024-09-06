@@ -46,10 +46,16 @@
                     </p>
                 </x-start-detail-pc>
                 <x-start-detail-pc>
-                    <aside class="flex flex-col items-center gap-2">
-                        <p class="text-gray-800">メールアドレス</p>
-                        <p class="text-2xl text-blue-800 underline"><a href="mailto:yu_suke1125aadxyz@icloud.com">yu_suke1125aadxyz@icloud.com</a></p>
-                    </aside>
+                    <div class="flex flex-col gap-8 justify-center items-center w-full h-full">
+                        <aside class="flex flex-col items-center gap-1">
+                            <p class="text-gray-800">メールアドレス</p>
+                            <p class="text-2xl text-blue-800 underline"><a href="mailto:yu_suke1125aadxyz@icloud.com">yu_suke1125aadxyz@icloud.com</a></p>
+                        </aside>
+                        <aside class="flex flex-col items-center gap-1">
+                            <p class="text-gray-800">Github</p>
+                            <p class="text-2xl text-blue-800 underline"><a href="https://github.com/ima-yusuke" target="_blank">https://github.com/ima-yusuke</a></p>
+                        </aside>
+                    </div>
                 </x-start-detail-pc>
             </article>
             <p class="text-white bg-gray-800 w-full text-center pt-6 text-2xl">YUSUKE IMAI PORTFOLIO</p>
@@ -97,10 +103,16 @@
                         </p>
                     </x-start-detail-pc>
                     <x-start-detail-pc>
-                        <aside class="flex flex-col items-center justify-center h-full gap-2">
-                            <p class="text-gray-800">メールアドレス</p>
-                            <p class="text-blue-800 underline"><a href="mailto:yu_suke1125aadxyz@icloud.com">yu_suke1125aadxyz@icloud.com</a></p>
-                        </aside>
+                        <div class="flex flex-col gap-4 justify-center items-center w-full h-full">
+                            <aside class="flex flex-col items-center">
+                                <p class="text-gray-800">メールアドレス</p>
+                                <p class="text-blue-800 underline"><a href="mailto:yu_suke1125aadxyz@icloud.com">yu_suke1125aadxyz@icloud.com</a></p>
+                            </aside>
+                            <aside class="flex flex-col items-center">
+                                <p class="text-gray-800">Github</p>
+                                <p class="text-blue-800 underline"><a href="https://github.com/ima-yusuke" target="_blank">https://github.com/ima-yusuke</a></p>
+                            </aside>
+                        </div>
                     </x-start-detail-pc>
                 </article>
                 <p class="text-white bg-gray-800 w-full text-center pt-2 md:text-2xl">YUSUKE IMAI PORTFOLIO</p>

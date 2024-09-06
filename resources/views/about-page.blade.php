@@ -223,7 +223,10 @@
                         <x-ability-language src="storage/img/language-angularjs.png" language="AngularJS"></x-ability-language>
                     </x-ability-language-container>
                     <x-ability-language-container key="ツール">
-                        <x-ability-language src="storage/img/language-github.svg" language="Git"></x-ability-language>
+                        <a href="https://github.com/ima-yusuke" target="_blank" class="flex flex-col items-center gap-1">
+                            <img src="{{asset("storage/img/language-github.svg")}}" class="w-[25px] h-[25px] md:w-[2.5rem] md:h-[2.5rem] object-cover">
+                            <p class="text-xs">Git</p>
+                        </a>
                         <x-ability-language src="storage/img/language-tailwindcss.svg" language="Tailwind CSS"></x-ability-language>
                         <x-ability-language src="storage/img/language-bootstrap.svg" language="Bootstrap"></x-ability-language>
                         <x-ability-language src="storage/img/language-docker.png" language="Docker"></x-ability-language>
