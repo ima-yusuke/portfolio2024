@@ -27,6 +27,29 @@ const TAMWOOD_MODAL = document.getElementById('tamwood_modal');
 // どちらの画面を表示するかのフラグ
 let flag = true;
 
+if (sessionStorage.getItem('flag-english') === 'true') {
+    ShowAbility();
+    TOEIC_MODAL.classList.remove('hide');
+    TOEIC_MODAL.style.opacity = "1"; // モーダルを完全に表示
+    TOEIC_MODAL.style.zIndex = "100"; // モーダルを最前面に表示
+    document.body.classList.add("overflow-hidden"); // スクロールを無効にする
+    sessionStorage.removeItem('flag-english');
+}else if(sessionStorage.getItem('flag-sale') === 'true'){
+    ShowAbility();
+    KNT_MODAL.classList.remove('hide');
+    KNT_MODAL.style.opacity = "1"; // モーダルを完全に表示
+    KNT_MODAL.style.zIndex = "100"; // モーダルを最前面に表示
+    document.body.classList.add("overflow-hidden"); // スクロールを無効にする
+    sessionStorage.removeItem('flag-sale');
+}else if(sessionStorage.getItem('flag-programming') === 'true'){
+    ShowAbility();
+    TAMWOOD_MODAL.classList.remove('hide');
+    TAMWOOD_MODAL.style.opacity = "1"; // モーダルを完全に表示
+    TAMWOOD_MODAL.style.zIndex = "100"; // モーダルを最前面に表示
+    document.body.classList.add("overflow-hidden"); // スクロールを無効にする
+    sessionStorage.removeItem('flag-programming');
+}
+
 RIGHT_BTN.addEventListener('click', () => {
   if(flag===true){
       ShowAbility();
@@ -98,7 +121,6 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 });
-
 
 function ShowAbility(){
     HEAD_INFO.classList.add("hide");
