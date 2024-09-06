@@ -3,6 +3,26 @@
     border-bottom-right-radius: 10%;
 }
 
+/*最初のアニメーション*/
+.fade-in {
+    opacity: 0;
+    transition: opacity 1.5s ease-in-out;
+}
+
+.fade-in.show {
+    opacity: 1;
+}
+
+.fade-in.show-others{
+    opacity: 0.6;
+}
+
+.fade-in.out{
+    opacity: 0;
+}
+
+
+
 /*ABボタン*/
 .a-large-btn{
     width:60px;

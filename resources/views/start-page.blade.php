@@ -24,7 +24,12 @@
 
         {{--ゲームスクリーン--}}
         <div class="w-1/2 border-solid border-gray-800 game-screen-border rounded-lg" style="border-width: 25px">
-            <article class="w-full bg-work-bg flex flex-col items-center justify-center gap-6 py-16 blue-screen min-h-[45dvh] relative">
+            <article id="game_screen_pc" class="w-full bg-work-bg flex flex-col items-center justify-center gap-6 py-16 blue-screen min-h-[45dvh] relative">
+                <div id="welcomeTextPc" class="fade-in flex flex-col justify-center items-center gap-2 text-gray-800 text-2xl">
+                    <p>WELCOME TO</p>
+                    <p>YUSUKE IMAI PORTFOLIO</p>
+                </div>
+
                 <x-start-menu title="さいしょから はじめる" :flag="true"/>
                 <x-start-menu title="このサイト について" :flag="false"/>
                 <x-start-menu title="コンタクト じょうほう" :flag="false"/>
@@ -72,6 +77,10 @@
             {{--上画面--}}
             <div class="h-[45%] w-[90%] border-solid border-gray-800 game-screen-border rounded-lg m-4 flex flex-col" style="border-width: 15px">
                 <article id="game_screen_mobile" class="w-full bg-work-bg flex flex-col items-center justify-center gap-4 py-2 flex-grow overflow-y-scroll relative max-h-[35dvh]">
+                    <div id="welcomeTextMobile" class="fade-in flex flex-col justify-center items-center gap-2 text-gray-800 text-xl">
+                        <p>WELCOME TO</p>
+                        <p>YUSUKE IMAI PORTFOLIO</p>
+                    </div>
                     <x-start-menu title="さいしょから はじめる" :flag="true"/>
                     <x-start-menu title="このサイト について" :flag="false"/>
                     <x-start-menu title="コンタクト じょうほう" :flag="false"/>

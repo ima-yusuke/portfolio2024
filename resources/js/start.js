@@ -1,3 +1,4 @@
+const GAME_SCREEN_PC = document.getElementById('game_screen_pc');
 const GAME_SCREEN_MOBILE = document.getElementById('game_screen_mobile');
 const TOP_ARROW_PC = document.getElementById('top_arrow_pc');
 const BOTTOM_ARROW_PC = document.getElementById('bottom_arrow_pc');
@@ -19,9 +20,37 @@ let currentCountMobile = -1000;
 let scrollFlag = false;
 let nameFlag = false;
 
+function StartAnimation(){
+
+    let welcomeTitle = null;
+
+    if(window.innerWidth > 768){
+        welcomeTitle = document.getElementById("welcomeTextPc");
+    }else{
+        welcomeTitle = document.getElementById("welcomeTextMobile");
+    }
+    // 100ms後にshowクラスを追加してふわっと表示させる
+    setTimeout(function() {
+        welcomeTitle.classList.add("show");
+
+        setTimeout(function() {
+            welcomeTitle.classList.add("out");
+
+            setTimeout(function() {
+                welcomeTitle.style.display = "none";
+                setTimeout(function() {
+                    ShowMenu();
+                },100);
+            },2000);
+        },1500);
+    }, 100);
+}
+
+StartAnimation();
+
 // pc
 BOTTOM_ARROW_PC.addEventListener('click', () => {
-    if(countPc === 2) return;
+    if (countPc === 2) return;
     startMenu[countPc].style.opacity = '0.6';
     countPc++;
     startMenu[countPc].style.opacity = '1';
@@ -138,6 +167,13 @@ B_BTN_MOBILE.addEventListener('click', () => {
 })
 
 // 共通
+
+
+function ShowMenu(){
+    for (let i = 0; i < startMenu.length; i++) {
+        startMenu[i].classList.remove("hidden");
+    }
+}
 
 // 初期画面/MENU選択時の処理
 for (let i = 0; i < startMenu.length; i++) {
