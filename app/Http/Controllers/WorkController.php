@@ -10,9 +10,9 @@ class WorkController extends Controller
         [
             "id" => 1,
             "name" => "英単語帳",
-            "overview" => "英単語を登録、編集、削除できるメモサイト。",
+            "overview" => "英単語を登録、削除できるメモサイト。ただし、ログインしないと新規で単語登録、削除が出来ない仕様。Laravel Permissionを使用し、ログインをすると、新規登録、削除が可能な権限を付与している。",
             "background" => "趣味である洋画を見ている時に分からない単語をiphoneのメモに書いていた。しかし、単語数が増えてきて、メモが見づらくなったため、自分で作成することを思い立った。",
-            "language" => ["Laravel", "MySQL"],
+            "language" => ["Laravel","Laravel Permission","MySQL"],
             "image" => "work-english.png",
             "url" => "https://imai.gummy-tech.com"
         ],
