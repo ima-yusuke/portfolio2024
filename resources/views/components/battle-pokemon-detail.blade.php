@@ -23,8 +23,8 @@
             </div>
             @if($flag=="true")
                 <aside class="flex w-[40%] justify-between md:text-4xl mr-4">
-                    <p>30／</p>
-                    <p class="text-end">50</p>
+                    <p>12／</p>
+                    <p class="text-end">196</p>
                 </aside>
             @endif
         </div>

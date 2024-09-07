@@ -116,7 +116,7 @@
         <section class="flex items-center text-white text-sm md:text-4xl h-[12dvh]" id="head_info">
             <div class="bg-about-title-bg-light-blue h-full flex items-center">
                 <h1 class="bg-about-title-bg-brown h-full flex items-center px-2 md:px-8 rounded-r-full md:pr-8 border-r-4 border-solid border-about-title-dot">
-                    ポケモンじょうほう●
+                    モンスターじょうほう●
                 </h1>
             </div>
             <div class="bg-about-title-bg-command h-full">
@@ -148,7 +148,7 @@
                 </h1>
             </div>
             <div class="bg-about-title-bg-command h-full">
-                <p class="text-about-title-dot bg-about-title-bg-light-blue h-full px-2 md:px-8 rounded-r-full flex items-center">ポケモンのうりょく●</p>
+                <p class="text-about-title-dot bg-about-title-bg-light-blue h-full px-2 md:px-8 rounded-r-full flex items-center">モンスターのうりょく●</p>
             </div>
             <div class="bg-about-title-bg-command py-4 flex-1 flex justify-center items-center gap-4 md:gap-14 h-full">
                 <div class="flex flex-col md:flex-row justify-end items-center gap-1 md:gap-2">
@@ -180,7 +180,7 @@
                             <p class="text-2xl md:text-5xl">今井 祐輔 <span class="text-blue-500">♂</span></p>
                         </aside>
                         <div class="bg-white mx-4 flex justify-center items-center rounded-md">
-                            <img src="{{asset("storage/img/pokemon02.png")}}" class="w-[80%] h-[200px] md:w-[80%] md:h-[45dvh] object-cover">
+                            <img src="{{asset("storage/img/IMG_7185.jpeg")}}" class="w-full h-[200px] md:w-full md:h-[45dvh] object-cover">
                         </div>
                     </div>
                 </div>
@@ -245,8 +245,8 @@
                     </div>
                     <p class="text-base md:text-2xl pt-6 md:pt-10 px-6 leading-[2.5] md:leading-loose" id="trainer_memo">
                         <span class="under-line">
-                            プログラミングと英語学習が大好き。基本的に英語で話しかけても問題ない。放っておくとバックパッカーで一人どこかに旅に出ていく。エサはマックのフライドポテトを与えると喜ぶ。
-                            世界一周に憧れており、webサイト制作を通してその夢を叶えてくれるトレーナーを探している。まだまだ進化の可能性も秘めているポケモンである。
+                            プログラミングと海外旅行が大好き。基本的に英語で話しかけても問題ない。放っておくとバックパッカーで一人どこかに旅に出ていく。エサはマックのフライドポテトを与えると喜ぶ。
+                            世界一周に憧れており、webサイト制作を通してその夢を叶えてくれるトレーナーを探している。まだまだ進化の可能性も秘めているモンスターである。
                         </span>
                     </p>
                 </div>
@@ -260,7 +260,7 @@
                             <p class="text-white md:text-2xl absolute">けいけんち</p>
                         </div>
                     </div>
-                    <p class="md:text-xl pt-6 pb-4 mn:pb-0 px-2 md:px-6 leading-loose md:leading-[2]" id="trainer_memo">
+                    <p class="md:text-2xl pt-6 pb-4 mn:pb-0 px-2 md:px-6 leading-loose md:leading-[2]" id="trainer_memo">
                         <span class="under-line">
                             ■語学：<span class="text-blue-500 hover:cursor-pointer" id="open_toeic_modal">TOEIC 870点</span>、<a href="https://www.queensu.ca/" target="_blank" class="text-blue-500">Queen's University</a>（語学学校卒業）、
                             <a href="https://tamwood.com/" target="_blank" class="text-blue-500">Tamwood Language School</a>（語学学校卒業）<br>
