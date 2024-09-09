@@ -22,7 +22,7 @@
         <section class="w-full">
             {{-- ポケモン詳細 --}}
             <article class="flex justify-end mr-1 md:mr-[2em] md:mb-[0.5em] z-30 relative">
-                <x-battle-pokemon-detail name="今井 祐輔" sex="♂" hp="60" level="28" flag="true"></x-battle-pokemon-detail>
+                <x-battle-pokemon-detail name="ゆうすけ" sex="♂" hp="60" level="28" flag="true"></x-battle-pokemon-detail>
             </article>
 
             <div class="flex h-[100px] md:h-[11rem] w-full relative">
