@@ -66,7 +66,7 @@
             {{--close-work-btn--}}
             <div class="flex items-center gap-1 cursor-pointer">
                 <a href="/battle" class="a-btn">B</a>
-                <a href="/battle" class="text-sm text-white">バトル</a>
+                <a href="/battle" class="text-sm text-white">もどる</a>
             </div>
         </div>
 
