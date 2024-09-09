@@ -37,7 +37,7 @@
                     </div>
                 </article>
 
-                <article id="battle_menu" class="hidden w-[60%] md:w-[65%] h-full z-10">
+                <article id="battle_menu" class="hidden w-[55%] md:w-[65%] h-full z-10">
                     <div class="bg-white flex flex-col justify-center gap-2 md:gap-6 w-full h-full border-[6px] md:border-[10px] border-solid border-battle-menu-border rounded-lg" style="border-radius: 20px;">
                         <aside class="flex justify-between md:text-4xl mx-4 md:mx-20">
                             <a href="/about" class="hoverable hover:cursor-pointer" id="battle_command_programming">プログラミング</a>

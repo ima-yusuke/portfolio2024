@@ -27,7 +27,7 @@
             <article id="game_screen_pc" class="w-full bg-work-bg flex flex-col items-center justify-center gap-6 py-16 blue-screen min-h-[45dvh] relative">
                 <div id="welcomeTextPc" class="fade-in flex flex-col justify-center items-center gap-2 text-gray-800 text-2xl">
                     <p>WELCOME TO</p>
-                    <p>YUSUKE IMAI PORTFOLIO</p>
+                    <p>YUSUKE'S PORTFOLIO</p>
                 </div>
 
                 <x-start-menu title="さいしょから はじめる" :flag="true"/>
@@ -41,7 +41,7 @@
                    </aside>
                 </x-start-detail-pc>
                 <x-start-detail-pc>
-                    <p class="text-gray-800">こんにちは。<br>今井祐輔のポートフォリオへようこそ。このサイトのテーマは僕が幼少期に初めて買ってもらったゲームです。何か遊び心を入れたものにしたいと思い作成しました。<br>
+                    <p class="text-gray-800">こんにちは。<br>ゆうすけのポートフォリオへようこそ。このサイトのテーマは僕が幼少期に初めて買ってもらったゲームです。何か遊び心を入れたものにしたいと思い作成しました。<br>
                         恐らく皆さんも一度は遊んだことがあるであろうゲームをモチーフにしています。<br>是非覗いていってみてください。
                     </p>
                 </x-start-detail-pc>
@@ -58,7 +58,7 @@
                     </div>
                 </x-start-detail-pc>
             </article>
-            <p class="text-white bg-gray-800 w-full text-center pt-6 text-2xl">YUSUKE IMAI PORTFOLIO</p>
+            <p class="text-white bg-gray-800 w-full text-center pt-6 text-2xl">YUSUKE'S PORTFOLIO</p>
         </div>
 
         {{--ボタン--}}
@@ -85,7 +85,7 @@
                 <article id="game_screen_mobile" class="w-full bg-work-bg flex flex-col items-center justify-center gap-4 py-2 flex-grow overflow-y-scroll relative max-h-[35dvh]">
                     <div id="welcomeTextMobile" class="fade-in flex flex-col justify-center items-center gap-2 text-gray-800 text-xl">
                         <p>WELCOME TO</p>
-                        <p>YUSUKE IMAI PORTFOLIO</p>
+                        <p>YUSUKE'S PORTFOLIO</p>
                     </div>
                     <x-start-menu title="さいしょから はじめる" :flag="true"/>
                     <x-start-menu title="このサイト について" :flag="false"/>
@@ -98,7 +98,7 @@
                         </aside>
                     </x-start-detail-pc>
                     <x-start-detail-pc>
-                        <p class="text-gray-800">こんにちは。<br>今井祐輔のポートフォリオへようこそ。このサイトのテーマは僕が幼少期に初めて買ってもらったゲームです。何か遊び心を入れたものにしたいと思い作成しました。<br>
+                        <p class="text-gray-800">こんにちは。<br>ゆうすけのポートフォリオへようこそ。このサイトのテーマは僕が幼少期に初めて買ってもらったゲームです。何か遊び心を入れたものにしたいと思い作成しました。<br>
                             恐らく皆さんも一度は遊んだことがあるであろうゲームをモチーフにしています。<br>是非覗いていってみてください。
                         </p>
                     </x-start-detail-pc>
@@ -115,7 +115,7 @@
                         </div>
                     </x-start-detail-pc>
                 </article>
-                <p class="text-white bg-gray-800 w-full text-center pt-2 md:text-2xl">YUSUKE IMAI PORTFOLIO</p>
+                <p class="text-white bg-gray-800 w-full text-center pt-2 md:text-2xl">YUSUKE'S PORTFOLIO</p>
             </div>
 
             {{--上下境目--}}

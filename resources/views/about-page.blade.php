@@ -3,22 +3,21 @@
     <div class="hide fixed min-h-screen w-full flex flex-col justify-center items-center -z-10" id="toeic_modal">
         {{--モダルコンテナ--}}
         <div class="w-[90%] md:w-[80%] flex flex-col items-center justify-center relative rounded-md">
-            <button class="absolute -top-4 -right-4 text-2xl w-[50px] h-[50px] bg-red-500 text-white rounded-full" id="close_toeic_modal">X</button>
-            <img src="{{asset('storage/img/toeic.jpeg')}}" class="w-full h-[150px] md:h-[45dvh] object-cover">
-            <aside class="bg-ability-value-bg w-full flex flex-col items-center justify-center relative max-h-[60dvh] md:max-h-[40dvh]">
+            <button class="absolute -top-8 md:-top-4 -right-4 text-2xl z-20 w-[50px] h-[50px] bg-red-500 text-white rounded-full" id="close_toeic_modal">X</button>
+            <aside class="bg-ability-value-bg w-full flex flex-col items-center justify-center relative max-h-[60dvh] md:max-h-[70dvh]">
                 {{--スクロールヒント--}}
                 <div id="scroll_indicator" class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-black opacity-50 w-[200px] h-[100px] flex justify-center items-center rounded-lg">
                     <p class="text-white text-center text-2xl">スクロール↓</p>
                 </div>
                 {{--過去の受験歴--}}
-                <div class="overflow-y-scroll flex flex-col w-full">
+                <div class="overflow-y-scroll flex flex-col w-full toeic-container">
                     <div class="w-full flex justify-center items-start gap-8">
                         <table>
                             <thead class="bg-ability-key-bg text-white">
                             <tr>
-                                <th>受験回数（計15回）</th>
+                                <th>受験回数</th>
                                 <th>受験日</th>
-                                <th>スコア（990点満点）</th>
+                                <th>スコア</th>
                             </tr>
                             </thead>
                             <tbody>
@@ -105,11 +104,6 @@
             </aside>
         </div>
     </div>
-    {{--Tamwoodモダル--}}
-    <x-ability-modal name="tamwood" src="storage/img/tamwood.jpeg"></x-ability-modal>
-    {{--KNTモダル--}}
-    <x-ability-modal name="knt" src="storage/img/knt.jpeg"></x-ability-modal>
-
 
     <div class="min-h-screen flex flex-col">
         {{--head（じょうほう）--}}
@@ -135,7 +129,7 @@
                 </div>
                 <div class="flex flex-col md:flex-row justify-between items-center gap-1 md:gap-2">
                     <p><a href="/battle" class="a-btn">B</a></p>
-                    <p><a href="/battle" class="text-[12px] md:text-4xl">バトル</a></p>
+                    <p><a href="/battle" class="text-[12px] md:text-4xl">もどる</a></p>
                 </div>
             </div>
         </section>
@@ -163,7 +157,7 @@
                 </div>
                 <div class="flex flex-col md:flex-row justify-between items-center gap-1 md:gap-2">
                     <p><a href="/battle" class="a-btn">B</a></p>
-                    <p><a href="/battle" class="text-[12px] md:text-4xl">バトル</a></p>
+                    <p><a href="/battle" class="text-[12px] md:text-4xl">もどる</a></p>
                 </div>
             </div>
         </section>
@@ -177,7 +171,7 @@
                     <div class="bg-info-img-bg py-4" id="img_container">
                         <aside class="flex justify-between text-white px-8 md:px-4 pb-2">
                             <p class="text-2xl md:text-5xl">Lv27</p>
-                            <p class="text-2xl md:text-5xl">今井 祐輔 <span class="text-blue-500">♂</span></p>
+                            <p class="text-2xl md:text-5xl">ゆうすけ <span class="text-blue-500">♂</span></p>
                         </aside>
                         <div class="bg-white mx-4 flex justify-center items-center rounded-md">
                             <img src="{{asset("storage/img/IMG_7185.jpeg")}}" class="w-full h-[200px] md:w-full md:h-[45dvh] object-cover">
@@ -187,8 +181,8 @@
 
                 {{--right（じょうほう）--}}
                 <div class="ml-4 h-full w-full md:w-[50%] flex flex-col gap-6 my-4" id="info_right_container">
-                    <x-info-detail key="なまえ" value="今井 祐輔 （いまい ゆうすけ）"></x-info-detail>
-                    <x-info-detail key="生年月日" value="1996.11.25"></x-info-detail>
+                    <x-info-detail key="なまえ" value="ゆうすけ"></x-info-detail>
+                    <x-info-detail key="年齢" value="20代後半"></x-info-detail>
                     <x-info-detail key="生息地" value="三重県"></x-info-detail>
                     <div class="flex flex-col md:flex-row items-start md:items-center">
                         <div class="bg-info-key-bg relative rounded-full w-[10rem] h-[30px] md:h-[40px] flex items-center justify-center z-20">
@@ -264,8 +258,8 @@
                         <span class="under-line">
                             ■語学：<span class="text-blue-500 hover:cursor-pointer" id="open_toeic_modal">TOEIC 870点</span>、<a href="https://www.queensu.ca/" target="_blank" class="text-blue-500">Queen's University</a>（語学学校卒業）、
                             <a href="https://tamwood.com/" target="_blank" class="text-blue-500">Tamwood Language School</a>（語学学校卒業）<br>
-                            ■営業：近畿日本ツーリスト（株） <span class="text-blue-500 hover:cursor-pointer" id="open_knt_modal">新人賞受賞</span><br>
-                            ■プログラミング：<a href="https://tamwood.com/study-work/web-developer/" target="_blank" class="text-blue-500">Tamwood Career</a>（Web Developmentコース卒業 / <span class="text-blue-500 hover:cursor-pointer" id="open_tamwood_modal">Diploma取得</span>）
+                            ■営業：某大手旅行会社 新人賞受賞<br>
+                            ■プログラミング：<a href="https://tamwood.com/study-work/web-developer/" target="_blank" class="text-blue-500">Tamwood Career</a>（Web Developmentコース卒業 / Diploma取得）
                         </span>
                     </p>
                 </div>
