@@ -15,9 +15,9 @@ const TEXT_OVERVIEW = document.getElementById("text_overview");
 const TEXT_BACKGROUND = document.getElementById("text_background");
 const TEXT_URL = document.getElementById("text_url");
 const IMG_WORK = document.getElementById("work_img");
-let currentPageFlag = true;
+let currentPageFlag = false;
 
-setData(BTN_PERSONAL_MENU,personalWorkData);
+setData(BTN_BUSINESS_MENU,businessWorkData);
 
 for (let i = 0; i < ARROWS.length; i++) {
     ARROWS[i].addEventListener("click",function () {
@@ -60,10 +60,11 @@ function setData(BTN,DATA){
             TEXT_NAME.innerText = newData.name;
             TEXT_OVERVIEW.innerText = newData.overview;
             TEXT_BACKGROUND.innerText = newData.background;
-            if(newData.url === false){
+            if(newData.url === null){
                 TEXT_URL.parentNode.classList.add("hide");
             }else{
                 TEXT_URL.href = newData.url;
+                TEXT_URL.innerText = "詳細はこちら";
             }
             IMG_WORK.src = "storage/img/"+newData.image;
             removeChild();

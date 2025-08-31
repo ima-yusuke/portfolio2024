@@ -4,37 +4,43 @@
         <article class="w-full md:w-1/2 flex flex-col pt-6 md:pt-8">
             {{--画像--}}
             <div class="h-1/2 w-full flex items-center justify-center">
-                <img src="{{asset("storage/img/".$personalWorkData[0]["image"])}}" alt="work" class="w-[90%] h-[35dvh] md:w-[85%] md:h-[40dvh] object-cover rounded-lg" id="work_img">
+                <img src="{{asset("storage/img/".$businessWorkData[0]["image"])}}" alt="work" class="w-[90%] h-[35dvh] md:w-[85%] md:h-[40dvh] object-cover rounded-lg" id="work_img">
             </div>
 
             <div class="h-1/2 w-full flex flex-col items-center gap-4 mb-4">
                 {{--タイトル--}}
                 <div class="flex justify-center md:justify-end items-center w-full">
                     <p class="-rotate-180 text-3xl md:text-4xl text-red-500 -mr-6 arrow" id="left_arrow">▶</p>
-                    <p class="w-[90%] md:w-[80%] md:text-2xl py-2 md:py-[0.2em] text-center bg-work-dark-yellow rounded-2xl md:tracking-[30px]" id="current_title">個人開発</p>
+                    <p class="w-[90%] md:w-[80%] md:text-2xl py-2 md:py-[0.2em] text-center bg-work-dark-yellow rounded-2xl md:tracking-[30px]" id="current_title">会社開発</p>
                     <p class="text-3xl md:text-4xl text-red-500 -ml-6 arrow" id="right_arrow">▶</p>
                 </div>
 
                 {{--説明文--}}
                 <div class="bg-white rounded-2xl w-[90%] md:w-full flex-1 md:ml-8 p-4 md:pr-10 flex flex-col gap-4 overflow-y-scroll">
                     <x-work-details title="サービス名">
-                        <p id="text_name" class="text-sm leading-loose text-gray-700">{{$personalWorkData[0]["name"]}}</p>
+                        <p id="text_name" class="text-sm leading-loose text-gray-700">{{$businessWorkData[0]["name"]}}</p>
                     </x-work-details>
                     <x-work-details title="サービス概要">
-                        <p id="text_overview" class="text-sm leading-loose text-gray-700">{{$personalWorkData[0]["overview"]}}</p>
+                        <p id="text_overview" class="text-sm leading-loose text-gray-700">{{$businessWorkData[0]["overview"]}}</p>
                     </x-work-details>
                     <x-work-details title="開発背景">
-                        <p id="text_background" class="text-sm leading-loose text-gray-700">{{$personalWorkData[0]["background"]}}</p>
+                        <p id="text_background" class="text-sm leading-loose text-gray-700">{{$businessWorkData[0]["background"]}}</p>
                     </x-work-details>
                     <x-work-details title="使用言語等">
                         <div class="flex gap-2" id="container_language">
-                            @foreach($personalWorkData[0]["language"] as $p_language)
+                            @foreach($businessWorkData[0]["language"] as $p_language)
                                 <p class="text-sm text-gray-700">{{$p_language}}</p>
                             @endforeach
                         </div>
                     </x-work-details>
                     <x-work-details title="サイトリンク">
-                        <a href="{{$personalWorkData[0]["url"]}}" target="_blank" class="text-blue-500 text-sm" id="text_url">こちら</a>
+                            <a @if($businessWorkData[0]["url"] !== null) href="{{$businessWorkData[0]["url"]}}" @endif  target="_blank" class="text-blue-500 text-sm" id="text_url">
+                                @if($businessWorkData[0]["url"] === null)
+                                    準備中
+                                @else
+                                    こちら
+                                @endif
+                            </a>
                     </x-work-details>
                 </div>
             </div>
@@ -43,8 +49,8 @@
         {{--右側--}}
         <article class="hidden md:flex w-1/2 border-4 border-solid border-work-border-r-container md:mr-2 rounded-lg">
             <div class="w-full h-full bg-work-dark-yellow py-8 md:py-12 px-1 md:px-2 rounded-lg">
-                <x-work-menu :workdata="$personalWorkData" :flag="true" category="personal"/>
-                <x-work-menu :workdata="$businessWorkData" :flag="false" category="business"/>
+                <x-work-menu :workdata="$personalWorkData" :flag="false" category="personal"/>
+                <x-work-menu :workdata="$businessWorkData" :flag="true" category="business"/>
             </div>
         </article>
 
