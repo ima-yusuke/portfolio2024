@@ -84,8 +84,8 @@
                 <p>とじる</p>
             </div>
             <div class="w-full h-full bg-work-dark-yellow py-8 px-1 rounded-lg">
-                <x-work-menu-mobile :workdata="$personalWorkData" :flag="true" category="personal"/>
-                <x-work-menu-mobile :workdata="$businessWorkData" :flag="false" category="business"/>
+                <x-work-menu-mobile :workdata="$personalWorkData" :flag="false" category="personal"/>
+                <x-work-menu-mobile :workdata="$businessWorkData" :flag="true" category="business"/>
             </div>
         </div>
     </section>
