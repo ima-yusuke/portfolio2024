@@ -174,7 +174,7 @@
                             <p class="text-2xl md:text-5xl">ゆうすけ <span class="text-blue-500">♂</span></p>
                         </aside>
                         <div class="bg-white mx-4 flex justify-center items-center rounded-md">
-                            <img src="{{asset("storage/img/IMG_7185.jpeg")}}" class="w-full h-[200px] md:w-full md:h-[45dvh] object-cover">
+                            <img src="{{asset("storage/img/IMG_7185.webp")}}" class="w-full h-[200px] md:w-full md:h-[45dvh] object-cover">
                         </div>
                     </div>
                 </div>
@@ -199,22 +199,22 @@
                 {{--right（のうりょく）--}}
                 <div class="md:ml-4 h-full w-full md:w-[50%] flex flex-col gap-6 my-4 hide" id="ability_right_container">
                     <x-ability-language-container key="マークアップ言語">
-                        <x-ability-language src="storage/img/language-html.png" language="HTML"></x-ability-language>
-                        <x-ability-language src="storage/img/language-css.png" language="CSS"></x-ability-language>
-                        <x-ability-language src="storage/img/language-sass.png" language="Sass(SCSS)"></x-ability-language>
+                        <x-ability-language src="storage/img/language-html.webp" language="HTML"></x-ability-language>
+                        <x-ability-language src="storage/img/language-css.webp" language="CSS"></x-ability-language>
+                        <x-ability-language src="storage/img/language-sass.webp" language="Sass(SCSS)"></x-ability-language>
                     </x-ability-language-container>
                     <x-ability-language-container key="プログラミング言語">
                         <x-ability-language src="storage/img/language-javascript.svg" language="JavaScript"></x-ability-language>
-                        <x-ability-language src="storage/img/language-nodejs.png" language="Node.js"></x-ability-language>
-                        <x-ability-language src="storage/img/language-jquery.png" language="JQuery"></x-ability-language>
-                        <x-ability-language src="storage/img/language-php.png" language="PHP"></x-ability-language>
+                        <x-ability-language src="storage/img/language-nodejs.webp" language="Node.js"></x-ability-language>
+                        <x-ability-language src="storage/img/language-jquery.webp" language="JQuery"></x-ability-language>
+                        <x-ability-language src="storage/img/language-php.webp" language="PHP"></x-ability-language>
                     </x-ability-language-container>
                     <x-ability-language-container key="フレームワーク">
                         <x-ability-language src="storage/img/language-laravel.svg" language="Laravel"></x-ability-language>
                         <x-ability-language src="storage/img/language-nextjs.svg" language="Next.js"></x-ability-language>
-                        <x-ability-language src="storage/img/language-react.png" language="React"></x-ability-language>
-                        <x-ability-language src="storage/img/language-vue.png" language="Vue.js"></x-ability-language>
-                        <x-ability-language src="storage/img/language-angularjs.png" language="AngularJS"></x-ability-language>
+                        <x-ability-language src="storage/img/language-react.webp" language="React"></x-ability-language>
+                        <x-ability-language src="storage/img/language-vue.webp" language="Vue.js"></x-ability-language>
+                        <x-ability-language src="storage/img/language-angularjs.webp" language="AngularJS"></x-ability-language>
                     </x-ability-language-container>
                     <x-ability-language-container key="ツール">
                         <a href="https://github.com/ima-yusuke" target="_blank" class="flex flex-col items-center gap-1">
@@ -223,8 +223,8 @@
                         </a>
                         <x-ability-language src="storage/img/language-tailwindcss.svg" language="Tailwind CSS"></x-ability-language>
                         <x-ability-language src="storage/img/language-bootstrap.svg" language="Bootstrap"></x-ability-language>
-                        <x-ability-language src="storage/img/language-docker.png" language="Docker"></x-ability-language>
-                        <x-ability-language src="storage/img/language-mysql.png" language="MySQL"></x-ability-language>
+                        <x-ability-language src="storage/img/language-docker.webp" language="Docker"></x-ability-language>
+                        <x-ability-language src="storage/img/language-mysql.webp" language="MySQL"></x-ability-language>
                     </x-ability-language-container>
                 </div>
             </article>

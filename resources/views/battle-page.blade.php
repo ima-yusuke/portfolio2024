@@ -9,13 +9,13 @@
 
             {{-- ポケモンイラスト --}}
             <article class="flex justify-end mr-2 md:mr-10">
-                <x-battle-field src="storage/img/IMG_1007.PNG"></x-battle-field>
+                <x-battle-field src="storage/img/IMG_1007.webp"></x-battle-field>
             </article>
         </section>
 
         {{-- ポケモンイラスト（モバイル） --}}
         <article class="md:hidden flex justify-start z-10 mb-[-50px]">
-            <x-battle-field src="storage/img/IMG_1003.PNG"></x-battle-field>
+            <x-battle-field src="storage/img/IMG_1003.webp"></x-battle-field>
         </article>
 
         {{-- メニュー --}}
@@ -28,7 +28,7 @@
             <div class="flex h-[100px] md:h-[11rem] w-full relative">
                 {{-- ポケモンイラスト（PC） --}}
                 <article class="hidden md:flex justify-start md:pl-10 absolute -top-[200%] md:-top-[25vh] z-10 w-full h-full">
-                    <x-battle-field src="storage/img/IMG_1003.PNG"></x-battle-field>
+                    <x-battle-field src="storage/img/IMG_1003.webp"></x-battle-field>
                 </article>
 
                 <article id="default_menu" class="w-[55%] md:w-[65%] h-full bg-battle-menu-bg border-t-4 border-b-4 border-l-4 border-solid border-yellow-500 z-10">
