@@ -10,13 +10,14 @@
             <div class="h-1/2 w-full flex flex-col items-center gap-4 mb-4">
                 {{--タイトル--}}
                 <div class="flex justify-center md:justify-end items-center w-full">
-                    <p class="-rotate-180 text-3xl md:text-4xl text-red-500 -mr-6 arrow" id="left_arrow">▶</p>
+                    <p class="-rotate-180 text-3xl md:text-4xl text-red-500 -mr-6 arrow arrow-blink" id="left_arrow">▶</p>
                     <p class="w-[90%] md:w-[80%] md:text-2xl py-2 md:py-[0.2em] text-center bg-work-dark-yellow rounded-2xl md:tracking-[30px]" id="current_title">会社開発</p>
-                    <p class="text-3xl md:text-4xl text-red-500 -ml-6 arrow" id="right_arrow">▶</p>
+                    <p class="text-3xl md:text-4xl text-red-500 -ml-6 arrow arrow-blink" id="right_arrow">▶</p>
                 </div>
 
                 {{--説明文--}}
-                <div class="bg-white rounded-2xl w-[90%] md:w-full flex-1 md:ml-8 p-4 md:pr-10 flex flex-col gap-4 overflow-y-scroll">
+                <div class="relative bg-white rounded-2xl w-[90%] md:w-full flex-1 md:ml-8 overflow-hidden">
+                <div class="w-full h-full p-4 md:pr-10 flex flex-col gap-4 overflow-y-scroll" id="work_detail_scroll">
                     <x-work-details title="サービス名">
                         <p id="text_name" class="text-sm leading-loose text-gray-700">{{$businessWorkData[0]["name"]}}</p>
                     </x-work-details>
@@ -42,6 +43,11 @@
                                 @endif
                             </a>
                     </x-work-details>
+                </div>
+                {{--スクロールヒント--}}
+                <div class="scroll-hint" id="scroll_hint">
+                    <span class="scroll-hint-arrow">▼</span>
+                </div>
                 </div>
             </div>
         </article>

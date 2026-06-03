@@ -146,16 +146,6 @@ class WorkController extends Controller
             "image" => "work-kikukawa.png",
             "url" => "https://kikukawa.jobcruise.jp/"
         ],
-        [
-            "id" => 11,
-            "name" => "LP",
-            "overview" => "LP。採用サイト。",
-            "background" => "採用サイトを更新する予定のクライアント。新サイトが出来るまでのLPを作成。（現在のサイトを模写）。",
-            "language" => ["Laravel"],
-            "image" => "work-sansyu.png",
-            "url" => "https://sansyu.jobcruise.jp/"
-        ],
-
     ];
 
     public function ShowWork()

@@ -7,7 +7,8 @@
     padding: 0;
 }
 
-.hoverable:hover::before {
+.hoverable:hover::before,
+.hoverable.active::before {
     content: '▶';
     margin-right: 0.5rem;
     position: absolute;
@@ -21,4 +22,39 @@
 html, body {
     height: 100%;
     margin: 0;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+.arrow-blink {
+    animation: blink 2s ease-in-out infinite;
+}
+
+.scroll-hint {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 50px;
+    background: linear-gradient(to bottom, transparent, white);
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    padding-bottom: 6px;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+.scroll-hint-arrow {
+    font-size: 14px;
+    color: #9ca3af;
+    animation: bounce-down 1.5s ease-in-out infinite;
+}
+
+@keyframes bounce-down {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(5px); }
 }

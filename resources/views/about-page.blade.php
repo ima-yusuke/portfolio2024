@@ -170,7 +170,7 @@
                 <div class="w-full md:w-[50%] border-solid border-about-border h-full" style=" border-right-width: 8px;border-bottom-width: 8px;">
                     <div class="bg-info-img-bg py-4" id="img_container">
                         <aside class="flex justify-between text-white px-8 md:px-4 pb-2">
-                            <p class="text-2xl md:text-5xl">Lv27</p>
+                            <p class="text-2xl md:text-5xl">Lv29</p>
                             <p class="text-2xl md:text-5xl">ゆうすけ <span class="text-blue-500">♂</span></p>
                         </aside>
                         <div class="bg-white mx-4 flex justify-center items-center rounded-md">

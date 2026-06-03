@@ -18,6 +18,8 @@ const IMG_WORK = document.getElementById("work_img");
 let currentPageFlag = false;
 
 setData(BTN_BUSINESS_MENU,businessWorkData);
+setActiveMenu(CONTAINER_BUSINESS_MENU, businessWorkData[0].id);
+setActiveMenu(MOBILE_BUSINESS_MENU, businessWorkData[0].id);
 
 for (let i = 0; i < ARROWS.length; i++) {
     ARROWS[i].addEventListener("click",function () {
@@ -49,6 +51,9 @@ function SwitchView(Title,HideElement,ShowElement,Flag,DATA,MobileHideElement,Mo
         newLanguage.innerText = language;
         CONTAINER_LANGUAGE.appendChild(newLanguage);
     });
+    setActiveMenu(ShowElement, DATA[0].id);
+    setActiveMenu(MobileShowElement, DATA[0].id);
+    resetScrollHint();
 }
 
 function setData(BTN,DATA){
@@ -74,8 +79,24 @@ function setData(BTN,DATA){
                 newLanguage.innerText = language;
                 CONTAINER_LANGUAGE.appendChild(newLanguage);
             });
+            setActiveBtn(BTN[i]);
+            resetScrollHint();
         })
     }
+}
+
+function setActiveMenu(container, id) {
+    container.querySelectorAll(".hoverable").forEach(el => el.classList.remove("active"));
+    const target = container.querySelector("#" + CSS.escape(id));
+    if (target) target.classList.add("active");
+}
+
+function setActiveBtn(btn) {
+    const container = btn.closest("[id^='container_']");
+    if (container) {
+        container.querySelectorAll(".hoverable").forEach(el => el.classList.remove("active"));
+    }
+    btn.classList.add("active");
 }
 
 function removeChild() {
@@ -83,3 +104,21 @@ function removeChild() {
         CONTAINER_LANGUAGE.removeChild(CONTAINER_LANGUAGE.firstChild);
     }
 }
+
+// スクロールヒントの表示/非表示
+const SCROLL_CONTAINER = document.getElementById("work_detail_scroll");
+const SCROLL_HINT = document.getElementById("scroll_hint");
+
+function updateScrollHint() {
+    const isScrollable = SCROLL_CONTAINER.scrollHeight > SCROLL_CONTAINER.clientHeight;
+    const hasScrolled = SCROLL_CONTAINER.scrollTop > 10;
+    SCROLL_HINT.style.opacity = (isScrollable && !hasScrolled) ? "1" : "0";
+}
+
+function resetScrollHint() {
+    SCROLL_CONTAINER.scrollTop = 0;
+    updateScrollHint();
+}
+
+SCROLL_CONTAINER.addEventListener("scroll", updateScrollHint);
+updateScrollHint();
